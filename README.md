@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-[CS](##cs)
+[CS](#cs)
 
-- [Network](###network)
+- [Network](#network)
 - OS
 - Database
 
@@ -15,7 +15,7 @@ Front-End
 
 ## CS
 
-### [Network](https://github.com/heech1013/tech-interview-handbook/network/README.md)
+### [Network](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
 
 - OSI 7계층
   - OSI 7계층이란?
