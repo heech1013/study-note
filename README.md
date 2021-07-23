@@ -1,5 +1,3 @@
-# Study Note
-
 <h1 align="center">Study Note</h1>
 
 <div align="center">
@@ -51,7 +49,7 @@ Front-End
 - OSI 2계층(Data-link Layer)
   - OSI 2계층(Data-link Layer)이란?
   - 데이터 링크 계층의 주요 역할은?
-  - 2계층에서는 데이터가 hop-by-hop으로 전달된다는 것의 의미는
+  - 2계층에서는 데이터가 hop-by-hop으로 전달된다는 것의 의미는 무엇일까?
   - Framing이란?
   - Frame의 구조(필드)는?
   - 물리 주소(MAC 주소)이란?
@@ -110,17 +108,17 @@ Front-End
   - 데이터그램 방식이란?
   - 가상 회선 방식이란?
   - 가상 회선 방식에서 논리적 연결이 설정되는 과정은?
-  - 데이터그램 방식과 가상회선 방식이 속도 측면에서 어떤
-  - 데이터그램 방식과 가상회선 방식은 각각 어떠한 특성의
-  - 네트워크 내 한 노드가 다운되었을 때 데이터그램 방식과
+  - 데이터그램 방식과 가상회선 방식이 속도 측면에서 어떤 차이를 보일까?
+  - 데이터그램 방식과 가상회선 방식은 각각 어떠한 특성의 데이터를 전송할 때 적합할까?
+  - 네트워크 내 한 노드가 다운되었을 때 데이터그램 방식과 가상회선 방식의 차이점은?
   - 가상회선 방식과 데이터그램 방식의 공통점은?
   - Packet Switching `보충`
   - 패킷 교환 방식 말고 다른 방식에는 어떤 것들이 있을까?
   - 네트워크에서 '신뢰성'이란 무엇을 의미하나?
-  - IP의 비신뢰성을 보완하기 위한 방법에 대해 알고 있는 것이
-  - ICMP에서 사용하는 에러 메시지의 종류에는 어떤 것들이
+  - IP의 비신뢰성을 보완하기 위한 방법에 대해 알고 있는 것이 있는가?
+  - ICMP에서 사용하는 에러 메시지의 종류에는 어떤 것들이 있을까?
   - IP의 데이터그램 단편화(fragmentation)란?
-  - IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는
+  - IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는 어떤 것들이 있을까?
   - IPv6가 등장한 배경은?
   - IPv6의 특징은?
   - QoS(Quality of Service)란?
@@ -132,7 +130,7 @@ Front-End
   - ARP의 plug-and-play에 대해 설명?
   - 같은 LAN 상에서의 전송에서 ARP가 진행되는 과정은?
   - 다른 LAN으로의 전송에서 ARP가 진행되는 과정은?
-  - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성
+  - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)란?
   - DHCP의 장단점?
   - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
   - DHCP가 ip주소를 임대해주는 절차? `보충`
@@ -142,7 +140,7 @@ Front-End
   - Transport Layer의 특징?
   - Transport Layer의 역할?
   - Transport Layer에서 논리적 연결이 성립되는 과정은?
-  - Data-link Layer와 Transport Layer 모두 오류 제어와 흐름
+  - Data-link Layer와 Transport Layer 모두 오류 제어와 흐름 제어를 제공하는데, 둘의 차이점은?
   - Transport Layer가 흐름 제어를 제공하는 방법?
   - stop and wait이란?
   - 슬라이딩 윈도우란?
@@ -162,14 +160,14 @@ Front-End
   - TCP가 논리적 연결을 성립/해제하는 방법은?
   - 3-way handshake의 과정에 대해 설명해본다면?
   - 4-way handshake의 과정에 대해 설명해본다면?
-  - 메시지(세그먼트)가 SYN인지, ACK, FIN 등인지 나타내는
+  - 메시지(세그먼트)가 SYN인지, ACK, FIN 등인지 나타내는 방법은?
   - UDP(User Datagram Protocol)란?
   - UDP의 특징은?
   - 체크섬 필드로 오류를 어떻게 검출할 수 있을까?
   - UDP가 전송할 수 있는 데이터의 크기 제한은?
   - UDP에서 서버와 클라이언트가 몇 대 몇으로 연결되나?
   - TCP와 UDP는 각각 어떤 특성의 서비스에 적합할까?
-- OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) /
+- OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층(Application Layer) `보충`
 - TCP/IP 4계층(Application Layer, 응용 계층)
   - 응용 계층이란? `보충`
   - 응용 계층의 역할은?
@@ -202,7 +200,7 @@ Front-End
   - 메모리는 어떻게 구성되어 있을까?
   - 스레드란?
   - 스레드가 필요한 이유는? (스레드의 장점은?)
-  - 프로세스보다 스레드 간 context switching이 더 적은
+  - 프로세스보다 스레드 간 context switching이 더 적은 비용이 드는 이유는?
   - 프로세스와 스레드의 차이점은?
   - 스레드를 지원하는 주체에 따라 나눈다면 어떻게 나뉠까?
   - 사용자 레벨 스레드와 커널 레벨 스레드란?
@@ -222,7 +220,7 @@ Front-End
   - PCB가 생성되는 시점은?
   - PCB가 위치한 곳은?
   - Context Switching이 필요한 이유는? `보충`
-  - 프로세스의 상태가 전이되는 과정은? (프로세스 상태
+  - 프로세스의 상태가 전이되는 과정은? (프로세스 상태 전이도의 흐름은?)
   - 프로세스가 종료되면(terminated) PCB도 함께 제거될까?
   - 스케줄링이 필요한 이유는?
   - 시스템의 성능을 어떤 기준으로 측정할까?
@@ -261,14 +259,14 @@ Front-End
   - Critical section(임계 구역)이란?
   - Race condition(경쟁 상태)이란?
   - Mutual exclusion(상호 배제)이란?
-  - Mutual exclusion에 사용되는 기본 연산(primitive)의
-  - Mutual exclusion을 SW로 구현한 알고리즘에는 어떤 것들이
+  - Mutual exclusion에 사용되는 기본 연산(primitive)의 조건은?
+  - Mutual exclusion을 SW로 구현한 알고리즘에는 어떤 것들이 있나?
   - Dekker's algorithm을 설명해본다면?
-  - Dekker's algorithm을 더 자세히 설명해본다면? (간단하게
+  - Dekker's algorithm을 더 자세히 설명해본다면? (간단하게 코드로 표현해본다면?)
   - SW로 구현한 상호 배제 알고리즘의 단점은?
   - HW로 구현한 상호 배제 알고리즘에는 어떤 것들이 있나?
   - TAS(TestAndSet)란?
-  - TAS를 이용해 ME가 보장되는 과정을 조금 더 자세히 설명?
+  - TAS를 이용해 ME가 보장되는 과정을 조금 더 자세히 설명? (코드로 설명?)
   - OS로 구현한 상호 배제 알고리즘에는 어떤 것들이 있나?
   - 스핀락이란?
   - 스핀락의 장단점은?
@@ -288,7 +286,7 @@ Front-End
   - 데드락을 회피하는 방법은?
   - 데드락 회피 알고리즘 중 하나를 설명?
   - 은행원 알고리즘의 안정 상태, 불안정 상태란?
-  - 은행원 알고리즘이 수행되기 위해 필요한(유지해야 하는)
+  - 은행원 알고리즘이 수행되기 위해 필요한(유지해야 하는) 정보는?
   - 은행원 알고리즘의 단점은?
   - 데드락을 회복하는 방법은?
   - 언제 데드락 발생을 무시할까?
@@ -304,7 +302,7 @@ Front-End
   - 바운드 레지스터(bound register)란?
   - 바운드 레지스터가 타 프로세스 메모리 침범을 막는 방법은?
   - base and bound에서 운영체제의 역할은?
-  - base and bound에서 프로세스의 주소 공간을 옮기려면
+  - base and bound에서 프로세스의 주소 공간을 옮기려면 어떻게 해야 하나?
   - base and bound의 장단점은?
   - base and bound의 내부 단편화 문제란?
 - 세그멘테이션(segmentation)
@@ -312,9 +310,9 @@ Front-End
   - 세그먼트란?
   - 세그멘테이션에서 가상 주소로부터 물리 주소를 얻는 과정은?
   - 세그먼트의 바운드 레지스터의 역할은?
-  - 하드웨어가 가상 주소에서 세그먼트의 종류와 오프셋을
-  - 가상 주소 변환에 있어서 스택과 나머지 종류의 세그먼트 간
-  - 하드웨어는 세그먼트가 어느 방향으로 확장해야 하는지
+  - 하드웨어가 가상 주소에서 세그먼트의 종류와 오프셋을 파악하는 방법은?
+  - 가상 주소 변환에 있어서 스택과 나머지 종류의 세그먼트 간 차이는?
+  - 하드웨어는 세그먼트가 어느 방향으로 확장해야 하는지 어떻게 알 수 있을까?
   - 세그멘테이션이 메모리 공유를 지원하는 방법은?
   - 세그멘테이션을 위한 운영체제의 역할은?
   - 세그먼트 테이블?
@@ -333,18 +331,18 @@ Front-End
   - 페이지 테이블 엔트리(PTE, Page Table Entry)란?
   - PTE의 구성 요소에는 어떤 것들이 있는지?
   - 페이징의 가상 주소에서 물리 주소를 얻어내는 과정은?
-  - 현재 실행 중인 프로세스의 페이지 테이블 위치를 어떻게 알
+  - 현재 실행 중인 프로세스의 페이지 테이블 위치를 어떻게 알 수 있을까?
 - TLB
   - TLB(Translation-Lookaside Buffer, 변환-색인 버퍼)란?
   - TLB가 필요한 이유는?
-  - TLB가 도입된 상태에서 가상 메모리 참조 시 일어나는
+  - TLB가 도입된 상태에서 가상 메모리 참조 시 일어나는 과정은?
   - (TLB의) 지역성 2종류와 적용된 예시에 대해 설명?
   - TLB 미스를 처리하는 방법에는 어떤 것들이 있을까?
-  - TLB 미스 트랩 핸들러가 실행될 때 TLB 미스가 나지 않도록
-  - TLB Cache가 설계된 방식은? (cache의 associativity와
+  - TLB 미스 트랩 핸들러가 실행될 때 TLB 미스가 나지 않도록 대응 방안?
+  - TLB Cache가 설계된 방식은? (cache의 associativity와 관련하여)
   - TLB 각 항목의 구성은?
   - 페이지 테이블의 valid bit와 TLB의 valid bit 간 차이점은?
-  - TLB에는 여러 VPN이 공존할 수 있다. 하지만 그럴 경우 여러
+  - TLB에는 여러 VPN이 공존할 수 있다. 하지만 그럴 경우 여러 프로세스 간 VPN을 구분할 수 없다. 이에 대한 방안은?
   - 캐시 교체 정책에는 어떤 것들이 있나?
   - LRU란?
   - Random 정책이란? 장단점은?
@@ -355,8 +353,8 @@ Front-End
   - page fault란?
   - 스와핑이 지원되는 상황에서 메모리가 참조되는 과정을 설명?
   - 운영체제가 Page fault를 처리하는 과정은?
-  - 운영체제가 페이지 교체(스왑) 알고리즘을 작동시키는
-  - 페이지 교체(스왑) 알고리즘이 작동될 때(즉, 여유 공간이
+  - 운영체제가 페이지 교체(스왑) 알고리즘을 작동시키는 시기는?
+  - 페이지 교체(스왑) 알고리즘이 작동될 때(즉, 여유 공간이 최솟값보다 적어질 때) 일어나는 일은?
 - Blocking/Non-Blocking & Synchronous/Asynchronous
   - Blocking과 Non-Blocking의 차이점?
   - Synchronous와 Asynchronous의 차이점?

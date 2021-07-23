@@ -17,7 +17,7 @@
 - OSI 2계층(Data-link Layer)
   - OSI 2계층(Data-link Layer)이란?
   - 데이터 링크 계층의 주요 역할은?
-  - 2계층에서는 데이터가 hop-by-hop으로 전달된다는 것의 의미는
+  - 2계층에서는 데이터가 hop-by-hop으로 전달된다는 것의 의미는 무엇일까?
   - Framing이란?
   - Frame의 구조(필드)는?
   - 물리 주소(MAC 주소)이란?
@@ -76,17 +76,17 @@
   - 데이터그램 방식이란?
   - 가상 회선 방식이란?
   - 가상 회선 방식에서 논리적 연결이 설정되는 과정은?
-  - 데이터그램 방식과 가상회선 방식이 속도 측면에서 어떤
-  - 데이터그램 방식과 가상회선 방식은 각각 어떠한 특성의
-  - 네트워크 내 한 노드가 다운되었을 때 데이터그램 방식과
+  - 데이터그램 방식과 가상회선 방식이 속도 측면에서 어떤 차이를 보일까?
+  - 데이터그램 방식과 가상회선 방식은 각각 어떠한 특성의 데이터를 전송할 때 적합할까?
+  - 네트워크 내 한 노드가 다운되었을 때 데이터그램 방식과 가상회선 방식의 차이점은?
   - 가상회선 방식과 데이터그램 방식의 공통점은?
   - Packet Switching `보충`
   - 패킷 교환 방식 말고 다른 방식에는 어떤 것들이 있을까?
   - 네트워크에서 '신뢰성'이란 무엇을 의미하나?
-  - IP의 비신뢰성을 보완하기 위한 방법에 대해 알고 있는 것이
-  - ICMP에서 사용하는 에러 메시지의 종류에는 어떤 것들이
+  - IP의 비신뢰성을 보완하기 위한 방법에 대해 알고 있는 것이 있는가?
+  - ICMP에서 사용하는 에러 메시지의 종류에는 어떤 것들이 있을까?
   - IP의 데이터그램 단편화(fragmentation)란?
-  - IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는
+  - IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는 어떤 것들이 있을까?
   - IPv6가 등장한 배경은?
   - IPv6의 특징은?
   - QoS(Quality of Service)란?
@@ -98,7 +98,7 @@
   - ARP의 plug-and-play에 대해 설명?
   - 같은 LAN 상에서의 전송에서 ARP가 진행되는 과정은?
   - 다른 LAN으로의 전송에서 ARP가 진행되는 과정은?
-  - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성
+  - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)란?
   - DHCP의 장단점?
   - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
   - DHCP가 ip주소를 임대해주는 절차? `보충`
@@ -108,7 +108,7 @@
   - Transport Layer의 특징?
   - Transport Layer의 역할?
   - Transport Layer에서 논리적 연결이 성립되는 과정은?
-  - Data-link Layer와 Transport Layer 모두 오류 제어와 흐름
+  - Data-link Layer와 Transport Layer 모두 오류 제어와 흐름 제어를 제공하는데, 둘의 차이점은?
   - Transport Layer가 흐름 제어를 제공하는 방법?
   - stop and wait이란?
   - 슬라이딩 윈도우란?
@@ -128,14 +128,14 @@
   - TCP가 논리적 연결을 성립/해제하는 방법은?
   - 3-way handshake의 과정에 대해 설명해본다면?
   - 4-way handshake의 과정에 대해 설명해본다면?
-  - 메시지(세그먼트)가 SYN인지, ACK, FIN 등인지 나타내는
+  - 메시지(세그먼트)가 SYN인지, ACK, FIN 등인지 나타내는 방법은?
   - UDP(User Datagram Protocol)란?
   - UDP의 특징은?
   - 체크섬 필드로 오류를 어떻게 검출할 수 있을까?
   - UDP가 전송할 수 있는 데이터의 크기 제한은?
   - UDP에서 서버와 클라이언트가 몇 대 몇으로 연결되나?
   - TCP와 UDP는 각각 어떤 특성의 서비스에 적합할까?
-- OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) /
+- OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층(Application Layer) `보충`
 - TCP/IP 4계층(Application Layer, 응용 계층)
   - 응용 계층이란? `보충`
   - 응용 계층의 역할은?
