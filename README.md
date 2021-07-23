@@ -12,7 +12,7 @@ CS / Front-End를 공부하고 기록합니다.
 (21.01 ~ )
 
 > - 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.
-> - 답안을 `병렬적`으로, `핵심`만 담아 작성한다.
+> - 답안에 `핵심`만 담아 `병렬적`으로 작성한다.
 
 ## Table of Contents
 
@@ -186,6 +186,10 @@ Front-End
   - DNS가 사용하는 전송 계층(Transport Layer)의 프로토콜은?
   - DNS에 UDP를 사용하는 이유? `보충`
   - DNS Round robin? `보충`
+
+[(목차로 돌아가기)](#table-of-contents)
+
+<br>
 
 ### [OS](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
 
@@ -363,3 +367,11 @@ Front-End
   - Non-Blocking + Sync ?
   - Blocking + Async ?
 - Reference
+
+[(목차로 돌아가기)](#table-of-contents)
+
+<br>
+
+---
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fheech1013%2Fstudy-note&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
