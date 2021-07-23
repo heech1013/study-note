@@ -5,7 +5,7 @@
 [CS](#cs)
 
 - [Network](#network)
-- OS
+- [OS](#os)
 - Database
 
 Front-End
@@ -170,7 +170,182 @@ Front-End
   - DNS에 UDP를 사용하는 이유? `보충`
   - DNS Round robin? `보충`
 
-### OS
+### [OS](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
+
+- 운영체제
+  - 운영체제란?
+  - 운영체제의 역할은?
+- 프로세스와 스레드
+  - 프로세스란?
+  - 프로그램이란?
+  - 프로세스와 자원의 차이점은?
+  - 프로세스와 작업(job)의 차이점은?
+  - 메모리는 어떻게 구성되어 있을까?
+  - 스레드란?
+  - 스레드가 필요한 이유는? (스레드의 장점은?)
+  - 프로세스보다 스레드 간 context switching이 더 적은
+  - 프로세스와 스레드의 차이점은?
+  - 스레드를 지원하는 주체에 따라 나눈다면 어떻게 나뉠까?
+  - 사용자 레벨 스레드와 커널 레벨 스레드란?
+  - 사용자 레벨 스레드의 장단점?
+  - 커널 레벨 스레드의 장단점?
+  - 멀티 프로세싱(multi-processing)이란?
+  - 멀티 프로그래밍(multi-programming)이란?
+  - 멀티 태스킹(multi-tasking)이란?
+  - 멀티 프로그래밍과 멀티 태스킹의 차이는?
+  - 멀티 스레딩(multi-threading)이란?
+  - 멀티 프로그래밍와 멀티 스레드의 차이점?
+- 스케줄링
+  - Context Switching이란?
+  - Context란?
+  - Context에는 예를 들어 어떤 정보들이 있을까?
+  - PCB(Process Control Block)란?
+  - PCB가 생성되는 시점은?
+  - PCB가 위치한 곳은?
+  - Context Switching이 필요한 이유는? `보충`
+  - 프로세스의 상태가 전이되는 과정은? (프로세스 상태
+  - 프로세스가 종료되면(terminated) PCB도 함께 제거될까?
+  - 스케줄링이 필요한 이유는?
+  - 시스템의 성능을 어떤 기준으로 측정할까?
+  - (참고) 용어
+  - 스케줄링의 주기에 따라 3가지로 나눈다면 어떻게 나뉠까?
+  - 장기 스케줄링이란? 예시는?
+  - 중기 스케줄링이란? 예시는?
+  - 단기 스케줄링이란? 예시는?
+  - 선점형 스케줄링과 비선점형 스케줄링의 차이?
+  - 선점형 스케줄링의 장단점?
+  - 비선점형 스케줄링의 장단점?
+  - 자원 관리에 있어서 time sharing과 space sharing의 차이는?
+  - FCFS(First Come First Service)란?
+  - FCFS의 장단점?
+  - FCFS에 적합한 시스템은?
+  - 배치 시스템(배치 처리, batch system, batch process)란?
+  - Round Robin이란?
+  - Round Robin의 장단점?
+  - time quantum이 짧을 때와 길 때 성능에 어떤 영향을 미칠까?
+  - Round Robin은 어떤 서비스에 적합할까?
+  - SPN(Shortest Process Next)이란?
+  - SPN의 장단점
+  - 시스템 내 프로세스 수를 적게 유지했을 때의 좋은 점은?
+  - SRTN(Shortest Remaining Time Next)란?
+  - SRTN의 장단점?
+  - HRRN(High Response Ratio Next)이란?
+  - HRRN의 장단점?
+  - MLQ(Multi Level Queue)란?
+  - MLQ의 장단점?
+  - MFQ(Multi level Feedback Queue)란?
+  - feedback에는 어떤 것들이 있을까?
+  - MFQ의 장단점?
+- 동기화
+  - 동기화란?
+  - 동기화가 필요한 이유는?
+  - Critical section(임계 구역)이란?
+  - Race condition(경쟁 상태)이란?
+  - Mutual exclusion(상호 배제)이란?
+  - Mutual exclusion에 사용되는 기본 연산(primitive)의
+  - Mutual exclusion을 SW로 구현한 알고리즘에는 어떤 것들이
+  - Dekker's algorithm을 설명해본다면?
+  - Dekker's algorithm을 더 자세히 설명해본다면? (간단하게
+  - SW로 구현한 상호 배제 알고리즘의 단점은?
+  - HW로 구현한 상호 배제 알고리즘에는 어떤 것들이 있나?
+  - TAS(TestAndSet)란?
+  - TAS를 이용해 ME가 보장되는 과정을 조금 더 자세히 설명?
+  - OS로 구현한 상호 배제 알고리즘에는 어떤 것들이 있나?
+  - 스핀락이란?
+  - 스핀락의 장단점은?
+  - 스핀락은 어떤 특성의 프로세스에서 사용하기 적절할까?
+  - 뮤텍스란?
+  - 뮤텍스는 어떤 특성의 프로세스에서 사용하기 적절할까?
+  - 스핀락과 뮤텍스의 차이점?
+  - 세마포어란?
+  - 세마포어에 사용되는 연산의 종류와 그 로직은?
+  - 스핀락(혹은 뮤텍스)와 세마포어의 차이는?
+- 데드락
+  - 데드락(dead lock, 교착 상태)이란?
+  - 데드락이 발생하기 위한 조건은?
+  - 데드락을 처리하는 방법은?
+  - 데드락을 예방하는 방법은?
+  - 데드락을 예방하는 방법의 단점은?
+  - 데드락을 회피하는 방법은?
+  - 데드락 회피 알고리즘 중 하나를 설명?
+  - 은행원 알고리즘의 안정 상태, 불안정 상태란?
+  - 은행원 알고리즘이 수행되기 위해 필요한(유지해야 하는)
+  - 은행원 알고리즘의 단점은?
+  - 데드락을 회복하는 방법은?
+  - 언제 데드락 발생을 무시할까?
+- 가상 메모리
+  - 가상 메모리란? (메모리 가상화란?)
+  - 메모리의 가상화가 필요한 이유는?
+- 주소 변환(address translation)
+  - 주소 변환이란?
+  - 주소 변환이 필요한 이유는?
+  - 주소 변환을 구현한 기술에는 어떤 것이 있는지?
+  - base and bound란?
+  - 베이스 레지스터란?
+  - 바운드 레지스터(bound register)란?
+  - 바운드 레지스터가 타 프로세스 메모리 침범을 막는 방법은?
+  - base and bound에서 운영체제의 역할은?
+  - base and bound에서 프로세스의 주소 공간을 옮기려면
+  - base and bound의 장단점은?
+  - base and bound의 내부 단편화 문제란?
+- 세그멘테이션(segmentation)
+  - 세그멘테이션이란?
+  - 세그먼트란?
+  - 세그멘테이션에서 가상 주소로부터 물리 주소를 얻는 과정은?
+  - 세그먼트의 바운드 레지스터의 역할은?
+  - 하드웨어가 가상 주소에서 세그먼트의 종류와 오프셋을
+  - 가상 주소 변환에 있어서 스택과 나머지 종류의 세그먼트 간
+  - 하드웨어는 세그먼트가 어느 방향으로 확장해야 하는지
+  - 세그멘테이션이 메모리 공유를 지원하는 방법은?
+  - 세그멘테이션을 위한 운영체제의 역할은?
+  - 세그먼트 테이블?
+  - 세그멘테이션의 장단점은?
+  - 외부 단편화란?
+  - 외부 단편화에 대한 대응 방안은?
+  - 압축이란? 진행되는 과정은?
+  - 압축의 단점은?
+  - 빈 공간 리스트를 관리하는 알고리즘에는 어떤 것들이 있나?
+- 페이징(Paging)
+  - 페이징이란?
+  - 페이징이 등장하게 된 배경은?
+  - 페이징의 장단점은?
+  - 페이징에서 물리 메모리의 구성은 어떻게 다른가?
+  - 페이지 테이블(page table)이란?
+  - 페이지 테이블 엔트리(PTE, Page Table Entry)란?
+  - PTE의 구성 요소에는 어떤 것들이 있는지?
+  - 페이징의 가상 주소에서 물리 주소를 얻어내는 과정은?
+  - 현재 실행 중인 프로세스의 페이지 테이블 위치를 어떻게 알
+- TLB
+  - TLB(Translation-Lookaside Buffer, 변환-색인 버퍼)란?
+  - TLB가 필요한 이유는?
+  - TLB가 도입된 상태에서 가상 메모리 참조 시 일어나는
+  - (TLB의) 지역성 2종류와 적용된 예시에 대해 설명?
+  - TLB 미스를 처리하는 방법에는 어떤 것들이 있을까?
+  - TLB 미스 트랩 핸들러가 실행될 때 TLB 미스가 나지 않도록
+  - TLB Cache가 설계된 방식은? (cache의 associativity와
+  - TLB 각 항목의 구성은?
+  - 페이지 테이블의 valid bit와 TLB의 valid bit 간 차이점은?
+  - TLB에는 여러 VPN이 공존할 수 있다. 하지만 그럴 경우 여러
+  - 캐시 교체 정책에는 어떤 것들이 있나?
+  - LRU란?
+  - Random 정책이란? 장단점은?
+  - TLB coverage를 벗어난다는 것의 의미는?
+- 스와핑(Swapping)
+  - 스와핑이란?
+  - swap in과 swap out에 대해 설명?
+  - page fault란?
+  - 스와핑이 지원되는 상황에서 메모리가 참조되는 과정을 설명?
+  - 운영체제가 Page fault를 처리하는 과정은?
+  - 운영체제가 페이지 교체(스왑) 알고리즘을 작동시키는
+  - 페이지 교체(스왑) 알고리즘이 작동될 때(즉, 여유 공간이
+- Blocking/Non-Blocking & Synchronous/Asynchronous
+  - Blocking과 Non-Blocking의 차이점?
+  - Synchronous와 Asynchronous의 차이점?
+  - Blocking + Sync ?
+  - Non-Blocking + Async ?
+  - Non-Blocking + Sync ?
+  - Blocking + Async ?
+- Reference
 
 ### Database
 
