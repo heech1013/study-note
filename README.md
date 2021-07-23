@@ -20,8 +20,7 @@ CS / Front-End를 공부하고 기록합니다.
 
 - [Network](#network)
 - [OS](#os)
-- Database
-- Data Structure / Algorithm
+- [Database](#database)
 
 Front-End
 
@@ -190,6 +189,8 @@ Front-End
 [(목차로 돌아가기)](#table-of-contents)
 
 <br>
+
+---
 
 ### [OS](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
 
@@ -367,6 +368,65 @@ Front-End
   - Non-Blocking + Sync ?
   - Blocking + Async ?
 - Reference
+
+[(목차로 돌아가기)](#table-of-contents)
+
+<br>
+
+### [Database](https://github.com/heech1013/tech-interview-handbook/blob/main/database/README.md)
+
+- 인덱스
+  - 인덱스(index)란?
+  - 인덱스를 사용하면 검색 속도가 빨라지는 이유는? `보충`
+  - 인덱스 사용 시 UPDATE나 DELETE의 성능은 어떻게 될까?
+  - 인덱스의 장단점은?
+  - 인덱스를 생성하기에 적절한 컬럼의 특성은?
+  - 인덱스를 생성하기에 적절하지 않은 컬럼의 특성은?
+  - 인덱스를 생성하기 위한 SQL문 작성 방법은?
+  - 특정 테이블에 생성된 인덱스를 확인하기 위한 방법은?
+  - DML(INSERT, DELETE, UPDATE)을 수행할 때 인덱스를 사용하는 컬럼에 대해 추가로 해줘야 하는 작업은?
+  - 인덱스를 구현할 수 있는 자료구조에는 어떤 것들이 있을까?
+  - Hash Table로 구현하지 않는 이유는?
+  - = 연산과 <, >, between 연산의 예를 들어본다면?
+  - B+Tree란?
+  - B-tree란?
+  - B-tree가 성립하기 위한 조건들은?
+  - B-tree의 장점은?
+  - 범위 검색이 Hash table보다 B+ Tree에서 이점을 갖는 이유는?
+  - B-Tree보다 B+ Tree가 갖는 이점은?
+- 트랜잭션
+  - 트랜잭션이란?
+  - 트랜잭션의 특징?
+  - 트랜잭션의 성질(ACID)?
+  - 트랜잭션의 연산?
+  - 트랜잭션의 상태?
+- 정규화
+  - 정규화란?
+  - 데이터의 중복을 최소화함으로써 얻는 이득은?
+  - 제1 정규화에 대해 설명?
+  - 제2 정규화에 대해 설명?
+  - 제3 정규화에 대해 설명?
+  - BCNF에 대해 설명?
+- 키
+  - 키란?
+  - 슈퍼키란?
+  - 후보키란?
+  - 기본키란?
+  - 대체키란?
+  - 외래키란?
+- SQL Query
+  - SQL이란?
+  - JOIN이란?
+  - INNER JOIN이란?
+  - OUTER JOIN이란?
+  - LEFT (OUTER) JOIN / RIGHT (OUTER) JOIN이란?
+  - CROSS JOIN(카티전 조인)이란?
+  - JOIN에서 ON과 WHERE의 차이점은?
+  - (OUTER) JOIN에서 (ON과 WHERE를 이용해서) 차집합을 구하는 방법은?
+- DBMS
+  - DBMS란?
+  - DBMS를 사용했을 때읭
+  - RDBMS란?
 
 [(목차로 돌아가기)](#table-of-contents)
 
