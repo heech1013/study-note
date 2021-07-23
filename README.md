@@ -1,4 +1,10 @@
-# tech-interview-handbook
+# Study Note
+
+CS / Web / JavaScript 공부 기록  
+(21.01 ~ )
+
+> - 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.
+> - 질문의 핵심만을 답한다.
 
 ## Table of Contents
 
@@ -7,11 +13,14 @@
 - [Network](#network)
 - [OS](#os)
 - Database
+- Data Structure / Algorithm
 
 Front-End
 
 - Web
 - JavaScript
+- React / Redux
+- Node.js
 
 ## CS
 
@@ -346,11 +355,3 @@ Front-End
   - Non-Blocking + Sync ?
   - Blocking + Async ?
 - Reference
-
-### Database
-
-## front-end
-
-### Web
-
-### JavaScript
