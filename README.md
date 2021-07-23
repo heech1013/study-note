@@ -1,10 +1,20 @@
 # Study Note
 
-CS / Web / JavaScript 공부 기록  
+<h1 align="center">Study Note</h1>
+
+<div align="center">
+  <img src="https://github.com/heech1013/tech-interview-handbook/blob/main/self-taught.jpg" alt="self-taught" width="400">
+</div>
+
+---
+
+## What is this?
+
+CS / Front-End를 공부하고 기록합니다.  
 (21.01 ~ )
 
 > - 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.
-> - 질문의 핵심만을 답한다.
+> - 답안을 `병렬적`으로, `핵심`만 담아 작성한다.
 
 ## Table of Contents
 
