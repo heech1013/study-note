@@ -2,18 +2,19 @@
 
 <div align="center">
   <img src="https://github.com/heech1013/tech-interview-handbook/blob/main/self-taught.jpg" alt="self-taught" width="400">
+
+  <br>
+
+CS / Front-End를 공부하고 기록합니다.  
+ (21.01 ~ )
+
+> - 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.
+> - 답안에 `핵심`만 담아 `병렬적`으로 작성한다.
+
 </div>
 <br>
 
 ---
-
-## What is this?
-
-CS / Front-End를 공부하고 기록합니다.  
-(21.01 ~ )
-
-> - 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.
-> - 답안에 `핵심`만 담아 `병렬적`으로 작성한다.
 
 ## Table of Contents
 
@@ -491,7 +492,7 @@ DBMS
 
 네트워크
 
-- 주소창에 'www.naver.com'을 입력 후 접속했을 때의 무슨 일이 일어날까?
+- 주소창에 www.naver.com을 입력 후 접속했을 때의 무슨 일이 일어날까?
 
 브라우저
 
