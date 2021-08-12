@@ -553,7 +553,7 @@ HTTP
 - CORS의 preflight request의 목적은?
 - (참고) 주요 HTTP 응답 코드
 - 인증과 인가의 차이점은?
-- HTTP 헤더 중 알고 있는 헤더가 뭐가 있나요?
+- HTTP 헤더에는 어떤 것들이 있을까? `보충`
 - HTTP의 보안 취약점은?
 
 HTTPS

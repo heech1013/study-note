@@ -63,7 +63,7 @@ HTTP
 - CORS의 preflight request의 목적은?
 - (참고) 주요 HTTP 응답 코드
 - 인증과 인가의 차이점은?
-- HTTP 헤더 중 알고 있는 헤더가 뭐가 있나요?
+- HTTP 헤더에는 어떤 것들이 있을까? `보충`
 - HTTP의 보안 취약점은?
 
 HTTPS
@@ -965,7 +965,7 @@ CORS의 preflight requests에 사용된다.
 
 ---
 
-### HTTP 헤더 중 알고 있는 헤더가 뭐가 있나요?
+### HTTP 헤더에는 어떤 것들이 있을까? `보충`
 
 ---
 
@@ -2324,7 +2324,7 @@ ES6(혹은 ES2015) 이상의 스펙으로 작성된 코드를, 모든 브라우�
 
 > - 트랜스파일의 예: TypeScript -> JavaScript
 > - 컴파일: 한 언어로 작성된 코드를 (추상화 수준이 다른) 타 언어로 변환하는 것.  
-  ex) C -> assembly language
+>   ex) C -> assembly language
 > - 요새는 컴파일과 트랜스파일을 혼용하는 추세이다.
 
 ---
