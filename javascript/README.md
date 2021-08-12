@@ -54,7 +54,7 @@ this
 - 함수가 '일반 함수로서' 호출될 때 this가 바인딩되는 객체는?
 - 전역객체란?
 - Browser-side와 server-side에서의 전역객체가 어떻게 다른가?
-- 그러면 함수가 '일반 함수로서', 함수의 내부 함수나 메소드의 내부 함수, 콜백 함수 등으로서 호출될 때는?
+- 그러면 함수의 내부 함수나 메소드의 내부 함수, 콜백 함수가 '일반 함수로서' 호출될 때의 this는 어떻게 될까?
 - 함수가 '일반 함수로서' 호출되었을 때 this가 전역 객체를 참조하는 것을 회피하는 방법이 있을까?
 - 함수가 '메소드로서' 호출될 때 this가 바인딩되는 객체는?
 - 그러면 함수가 '프로토타입 객체의 메소드로서' 호출될 때는?
@@ -447,18 +447,18 @@ Person.prototype.sayHello = function () {
 - 내부 함수가 존재하는 한 '자유 변수'는 유지되고,  
   내부 함수가 실행되면 내부 함수의 로직에 따라 자유 변수는 변경되어 최신 상태를 유지한다.
 
-      ```jsx
-      const toggle = (() => {
-      	let isVisible = false
+  ```jsx
+  const toggle = (() => {
+    let isVisible = false;
 
-      	return () => {
-      		isVisible = !isVisible
-      		box.style.display = isVisible ? 'block' : 'none'
-      	}
-      })()
+    return () => {
+      isVisible = !isVisible;
+      box.style.display = isVisible ? "block" : "none";
+    };
+  })();
 
-      toggleBtn.onclick = toggle
-      ```
+  toggleBtn.onclick = toggle;
+  ```
 
       >- 자유 변수(free variable) : 클로저에 의해 참조되는 외부 함수의 변수
       >- 내부 함수의 지역 변수로 상태를 관리한다면, 내부 함수를 호출할 때마다 지역 변수가 초기화되므로 변경된 최신 상태를 기억하지 못하지! 반면 IIFE는 한번만 실행되므로 변수가 초기화 될 일은 없다.
@@ -545,7 +545,7 @@ Person.prototype.sayHello = function () {
 ### 전역객체란?
 
 - 모든 객체의 유일한 최상위 객체를 의미.
-- 전역 변수(global object)를 프로퍼티로 소유한다.
+- 전역 변수(global variable)를 프로퍼티로 소유한다.
 
 ---
 
@@ -555,7 +555,7 @@ Person.prototype.sayHello = function () {
 
 ---
 
-### 그러면 함수가 '일반 함수로서', 함수의 내부 함수나 메소드의 내부 함수, 콜백 함수 등으로서 호출될 때는?
+### 그러면 함수의 내부 함수나 메소드의 내부 함수, 콜백 함수가 '일반 함수로서' 호출될 때의 this는 어떻게 될까?
 
 함수로서 호출된다면 일반 함수, 함수의 내부 함수, 메소드의 내부 함수, 콜백 함수 어디에서 선언되든 관계 없이 this는 전역 객체를 바인딩한다.
 
@@ -740,19 +740,24 @@ function helloArrow() {
   });
 }
 
-var obj = {
+var obj1 = {
   name: "Lee",
   hello: hello,
 };
 
-var name = "global context!";
+var obj2 = {
+  name: "Shin",
+  helloArrow: helloArrow,
+};
 
-hello(); // 'global contenxt!'
-helloArrow(); // 'global contenxt!'
-obj.hello(); // 'global contenxt!'
-obj.helloArrow(); // 'chris'
-hello.call({ name: "chris" }); // 'global contenxt!'
-helloArrow.call({ name: "alice" }); // 'alice'
+var name = "global context";
+
+hello(); // 'global contenxt'
+helloArrow(); // 'global contenxt'
+obj1.hello(); // 'Lee'
+obj2.helloArrow(); // 'global contenxt'
+hello.call({ name: "chris" }); // 'chris'
+helloArrow.call({ name: "alice" }); // ''global contenxt'
 ```
 
 ## 비동기 처리
