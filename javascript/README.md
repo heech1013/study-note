@@ -819,6 +819,16 @@ helloArrow.call({ name: "alice" }); // ''global contenxt'
 
 예를 들어 try 블록 내에 비동기 처리 함수(예를 들어 setTimeout)가 있고, setTimeout의 콜백 함수는 예외를 발생시킨다고 하자.
 
+```jsx
+try {
+  setTimeout(() => {
+    throw new Error("Here is error!");
+  });
+} catch (e) {
+  // Thrown error can't be catched in here.
+}
+```
+
 > `throw` 문은 사용자 정의 예외를 던질 수 있다. 호출자 함수 사이에 catch 블록이 없으면 프로그램이 중지된다.
 
 - 비동기 처리 함수 setTimeout은 실행 후 콜 스택에서 즉시 제거된다.
@@ -1260,7 +1270,7 @@ count();
 - 때문에 변수 선언 코드에 닿기 전에, 해당 변수를 참조할 수 있다. (`undefined`로) 이를 변수 호이스팅이라고 한다.
 
 > - 실제 값이 설정되는 것은 변수 선언 코드가 실행되는 시점이다.
-> - let과 const는 변수 객체화 단계에서 변수명이 프로퍼티로 설정되나, 값은 초기화되지 않는다. 때문에 변수 선언 드 이전에 변수를 참조하면 `uninitialized` 에러가 발생한다.
+> - let과 const는 변수 객체화 단계에서 변수명이 프로퍼티로 설정되나, 값은 초기화되지 않는다. 때문에 변수 선언 이전에 변수를 참조하면 `uninitialized` 에러가 발생한다.
 
 ---
 
@@ -1278,7 +1288,7 @@ count();
 
 `var` 변수 선언과 함수 선언.
 
-> - `var` 변수의 할당, `let` / `const` 변수 선언, 함수표현식은 호이스팅이 발생하지 않는다.
+> - `var` 변수의 **할당**, `let` / `const` 변수 **선언**, 함수**표현식**은 호이스팅이 발생하지 않는다.
 
 ---
 
