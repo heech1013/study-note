@@ -44,7 +44,6 @@ OSI 7계층
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층이 네트워크 개발과 유지보수에 어떤 이점이 있을까?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
-- OSI와 TCP/IP 계층이 각각 어느 계층과 연관되어 있을까?
 
 OSI 1계층(물리 계층, Physical Layer)
 
@@ -94,7 +93,7 @@ OSI 2계층(Data-link Layer)
 - 다중점 방식의 장단점은?
 - 전이중, 반이중, 단방향 방식에 대해 설명해본다면?
 
-(OSI) 3계층 & (TCP/IP) Network Layer
+(OSI) 3계층 Network Layer & (TCP/IP) Internet Layer
 
 - osi 3계층(network layer)란?
 - network layer의 역할은?

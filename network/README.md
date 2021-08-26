@@ -8,7 +8,6 @@ OSI 7계층
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층이 네트워크 개발과 유지보수에 어떤 이점이 있을까?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
-- OSI와 TCP/IP 계층이 각각 어느 계층과 연관되어 있을까?
 
 OSI 1계층(물리 계층, Physical Layer)
 
@@ -58,7 +57,7 @@ OSI 2계층(Data-link Layer)
 - 다중점 방식의 장단점은?
 - 전이중, 반이중, 단방향 방식에 대해 설명해본다면?
 
-(OSI) 3계층 & (TCP/IP) Network Layer
+(OSI) 3계층 Network Layer & (TCP/IP) Internet Layer
 
 - osi 3계층(network layer)란?
 - network layer의 역할은?
@@ -197,34 +196,13 @@ DNS
 
 ### OSI 7계층과 TCP/IP 4계층을 비교해본다면?
 
-tcp/ip는
+![Network%200208784d439545d2a6f93e6c5c4355bc/osi-vs-tcp-ip.png](Network%200208784d439545d2a6f93e6c5c4355bc/osi-vs-tcp-ip.png)
 
-- osi보다 먼저 개발되었고,
-- osi는 실제 개발된 사례가 많이 없어서 신뢰도가 떨어지는 반면,
-  tcp/ip는 계속적으로 실제 개발되고, 발전되면서 실질적인 표준이 되었다.
-
----
-
-### OSI와 TCP/IP 계층이 각각 어느 계층과 연관되어 있을까?
-
-TCP/IP의 application layer
-
-- application layer(7계층),
-- presentation layer(6계층),
-- session layer(5계층)
-
-TCP/IP의 transport layer
-
-- transport layer(4계층)
-
-TCP/IP의 internet layer
-
-- network layer(3계층)
-
-TCP/IP의 network layer
-
-- data-link layer(2계층),
-- physical layer(1계층)
+> tcp/ip는
+>
+> - osi보다 먼저 개발되었고,
+> - osi는 실제 개발된 사례가 많이 없어서 신뢰도가 떨어지는 반면,
+>   tcp/ip는 계속적으로 실제 개발되고, 발전되면서 실질적인 표준이 되었다.
 
 ## OSI 1계층(물리 계층, Physical Layer)
 
@@ -589,7 +567,7 @@ LAN을 위해 개발된 유선 통신망 기술.
 
 단방향 방식(simplex) : 송신, 혹은 수신만 할 수 있는 통신 방식
 
-## (OSI) 3계층 & (TCP/IP) Network Layer
+## (OSI) 3계층 Network Layer & (TCP/IP) Internet Layer
 
 ### osi 3계층(network layer)란?
 
