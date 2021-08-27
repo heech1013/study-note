@@ -247,7 +247,7 @@ DNS
 - PCB(Process Control Block)란?
 - PCB가 생성되는 시점은?
 - PCB가 위치한 곳은?
-- Context Switching이 필요한 이유는? `보충`
+- Context Switching이 필요한 이유는?
 - 프로세스의 상태가 전이되는 과정은? (프로세스 상태 전이도의 흐름은?)
 - 프로세스가 종료되면(terminated) PCB도 함께 제거될까?
 - 스케줄링이 필요한 이유는?
