@@ -75,7 +75,7 @@ this
 - JavaScript에서 (시간이 오래 걸리는) 동기적인 코드가 blocking을 일으키는 이유는 뭘까?
 - 프론트엔드에서 비동기 처리가 중요한 이유는?
 
-Promise
+콜백 패턴 & Promise
 
 - Promise란?
 - 동기식 작업과 비동기식 작업이란? 차이점은?
@@ -852,7 +852,7 @@ JavaScript는 single thread 기반의 언어이기 때문이다.
 
 ---
 
-## Promise
+## 콜백 패턴 & Promise
 
 ### Promise란?
 

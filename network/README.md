@@ -103,7 +103,6 @@ OSI 2계층(Data-link Layer)
 - ARP 테이블에서 TTL의 역할은?
 - ARP의 plug-and-play에 대해 설명?
 - 같은 LAN 상에서의 전송에서 ARP가 진행되는 과정은?
-- 다른 LAN으로의 전송에서 ARP가 진행되는 과정은?
 - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)란?
 - DHCP의 장단점?
 - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
@@ -123,14 +122,16 @@ OSI 4계층 / TCP/IP Transport Layer
 - 송신측이 수신측의 윈도우 사이즈를 어떻게 알 수 있을까?
 - 혼잡 제어(Congestion control란?
 - Transport Layer가 혼잡 제어를 제공하는 방법?
-- 혼잡 제어 알고리즘 AIMD(합 증가/곱 감소)란?
-- 혼잡 제어 알고리즘 Slow start(느린 시작)란?
-- 혼잡 제어 알고리즘 Fast retransmit(빠른 재전송)이란?
+- AIMD(합 증가/곱 감소)란?
+- Slow start(느린 시작)란?
+- Fast retransmit(빠른 재전송)이란?
 - Transport Layer가 오류 제어를 제공하는 방법?
+
+TCP & UDP
+
 - TCP(Transmission Control Protocol)란?
 - TCP의 특징은?
 - TCP가 UDP에 비해 속도가 느린 이유는?
-- TCP가 전이중 방식인 이유는?
 - TCP가 전송할 수 있는 데이터의 크기 제한은?
 - TCP에서 서버와 클라이언트가 몇 대 몇으로 연결될까?
 - TCP가 논리적 연결을 성립/해제하는 방법은?
@@ -165,8 +166,7 @@ DNS
 - 네임 서버의 종류는?
 - resolver란?
 - DNS가 사용하는 전송 계층(Transport Layer)의 프로토콜은?
-- DNS에 UDP를 사용하는 이유? `보충`
-- DNS Round robin? `보충`
+- DNS에 UDP를 사용하는 이유?
 
 ## OSI 7계층
 
@@ -1001,10 +1001,6 @@ A는 ARP 질의 패킷을 broadcast
 
 ---
 
-### 다른 LAN으로의 전송에서 ARP가 진행되는 과정은?
-
----
-
 ### DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)란?
 
 호스트의 IP 주소와 각종 TCP/iP 통신에 필요한 기본 설정을 클라이언트에게 자동으로 제공해주는 프로토콜.
@@ -1116,7 +1112,7 @@ _가상회선 방식에서 논리적 연결이 성립되는 과정_ 참고
 
 ### 송신측이 수신측의 윈도우 사이즈를 어떻게 알 수 있을까?
 
-TCP 3 way handshaking을 통해 수신측의 receive window size에 송신측의 send window size를 맞추게 된다.
+TCP 3 way handshaking을 통해 수신측의 `receive window size`에 송신측의 `send window size`를 맞추게 된다.
 
 ---
 
@@ -1134,20 +1130,19 @@ AIMD, Slow start, Fast retransmit, Fast recovery등의 혼잡 제어 알고리�
 
 ---
 
-### 혼잡 제어 알고리즘 AIMD(합 증가/곱 감소)란?
+### AIMD(합 증가/곱 감소)란?
 
 - 처음에 패킷을 하나씩 보내고, 문제 없이 도착하면 윈도우 사이즈를 1씩 증가시켜 전송.
 - 패킷 전송에 실패하거나 일정 시간을 넘으면 윈도우 사이즈를 절반으로 줄인다.
 
-- "Additive Increase / Multicative Decrease"
-  기타 특징
-- 공평한 방식: 여러 네트워크가 하나의 호스트를 공유하는 상황에서, 나중에 진입한 네트워크가 처음에는 불리하지만 시간이 지날 수록 평형의 상태에 가까워진다.
-- (문제 1) 처음에는 네트워크의 높은 대역폭을 다 활용하지 못함.
-- (문제 2) 네트워크 혼잡을 미리 감지하지 못함. 혼잡해지고 나서야 줄이는 방법.
+> - "Additive Increase / Multicative Decrease"
+> - 공평한 방식: 여러 네트워크가 하나의 호스트를 공유하는 상황에서, 나중에 진입한 네트워크가 처음에는 불리하지만 시간이 지날 수록 평형의 상태에 가까워진다.
+> - 문제 1: 처음에는 네트워크의 높은 대역폭을 다 활용하지 못함.
+> - 문제 2: 네트워크 혼잡을 미리 감지하지 못함. 혼잡해지고 나서야 줄이는 방법.
 
 ---
 
-### 혼잡 제어 알고리즘 Slow start(느린 시작)란?
+### Slow start(느린 시작)란?
 
 - 최초에 전송하는 패킷에 대해 각각의 ACK 값이 도착할 때마다 윈도우 사이즈를 1씩 증가시킨다.
 - 혼잡 현상이 발생하면 윈도우 사이즈를 1로 떨어트린다.
@@ -1157,7 +1152,7 @@ AIMD, Slow start, Fast retransmit, Fast recovery등의 혼잡 제어 알고리�
 
 ---
 
-### 혼잡 제어 알고리즘 Fast retransmit(빠른 재전송)이란?
+### Fast retransmit(빠른 재전송)이란?
 
 ![Network%200208784d439545d2a6f93e6c5c4355bc/Untitled%201.png](Network%200208784d439545d2a6f93e6c5c4355bc/Untitled%201.png)
 
@@ -1181,6 +1176,8 @@ AIMD, Slow start, Fast retransmit, Fast recovery등의 혼잡 제어 알고리�
 
 ---
 
+## TCP & UDP
+
 ### TCP(Transmission Control Protocol)란?
 
 Transport Layer의 프로토콜 중 하나로, 가상 회선 방식을 사용하는 연결형 서비스.
@@ -1203,18 +1200,13 @@ Transport Layer의 프로토콜 중 하나로, 가상 회선 방식을 사용하
 
 ---
 
-### TCP가 전이중 방식인 이유는?
-
-TCP로 데이터를 주고 받는 두 호스트가 수신과 동시에 송신할 수 있다.
-
----
-
 ### TCP가 전송할 수 있는 데이터의 크기 제한은?
 
 스트림 전송으로, 전송 데이터의 크기가 무제한이다.
 
 > - 스트림: 데이터, 패킷, 비트 등이 일련의 연속성을 갖는 흐름.
 > - 여기서 말하는 스트림은, 연결된 일련의 패킷을 말한다.
+> - TCP는 데이터를 무제한으로 전송할 수 있지만, Network layer에서 MTU에 따라 데이터를 분할(-> Data-link layer에서 프레이밍)
 
 ---
 
@@ -1240,7 +1232,7 @@ TCP에서는 서버와 클라이언트가 1:1로 연결된다.
 
 최초: 두 프로세스 A, B에 대하여
 
-- A: `CLOSED`, B: `LISTEN`
+- (상태) A: `CLOSED`, B: `LISTEN`
 
 A → B
 
@@ -1248,20 +1240,20 @@ A → B
 
   SYN 메시지는 Sequence Number 필드에 임의의 숫자 값을 지정되었고, SYN flag 비트를 1로 설정한 세그먼트이다.
 
-- A: `CLOSED`, B: `SYN_RSV`
+- (상태) A: `CLOSED`, B: `SYN_RSV`
 
 B → A
 
 - B는 A에게 SYN + ACK을 전송해서, 요청 수락과 동시에 A도 포트를 열어달라는 메시지를 보낸다.
 
-  임의의 숫자 Sequence Number와 이전 SYN 값에 대한 응답 ACK Number 필드와 함께, SYN과 ACK 비트가 1인 세그먼트이다.
+  A가 보낸 Sequence Number에 1을 더한 값과 이전 SYN 값에 대한 응답 ACK Number 필드와 함께, SYN과 ACK 비트가 1인 세그먼트이다.
 
-- (A: `CLOSED`, B: `SYN_RSV`)
+- (상태) A: `CLOSED`, B: `SYN_RSV`
 
 A → B
 
 - A는 B에게 수락 메시지 ACK을 보낸다.
-- A: `ESTABILISHED`, B: `ESTABILISHED`
+- (상태) A: `ESTABILISHED`, B: `ESTABILISHED`
 
 ---
 
@@ -1364,7 +1356,7 @@ UDP는 TCP에 비해 다음과 같은 이점이 있다.
 
 1. 신속성
 
-- TCP는 흐름, 혼잡, 오류 제어로 데이터를 재전송하거나 속도를 제어. 반면 UDP는 UDP 세그먼트로. 만들고 바로 네트워크 계층으로 전송. → 조금의 데이터 손실을 감수하면 지나친 latency를 방지할 수. 있다.
+- TCP는 흐름, 혼잡, 오류 제어로 데이터를 재전송하거나 속도를 제어. 반면 UDP는 UDP 세그먼트로. 만들고 바로 네트워크 계층으로 전송. → 조금의 데이터 손실을 감수하면 지나친 latency를 방지할 수 있다.
 - 연결 설정이 없다.
 
 2. 수용성
@@ -1449,21 +1441,19 @@ UDP 기반: DNS, DHCP 등
 
 → 브라우저는 해당 도메인과 ip주소 정보가 브라우저 캐시(Browser Cache)에 존재하는지 확인한다.
 
-크롬의 경우, chrome://net-internals/#dns 에서 확인할 수 있다.
+> 크롬의 경우, chrome://net-internals/#dns 에서 확인할 수 있다.
 
 → 브라우저 캐시에 정보가 없다면, OS에 저장된 DNS Cache를 찾는다.
 
-Mac OS X의 경우, `/etc/hosts`에 존재한다.
+> Mac OS X의 경우, `/etc/hosts`에 존재한다.
 
 → OS DNS Cache에 정보가 없다면, PC는 (단말의) 시스템에 설정되어 있는 local DNS에게 "www.naver.com"이라는 호스트명의 ip주소를 요청한다.
 
-Mac OS X의 경우, local DNS의 ip 주소가 `/etc/resolv.conf`에 존재한다.
+> Mac OS X의 경우, local DNS의 ip 주소가 `/etc/resolv.conf`에 존재한다.
 
-→ local DNS는 자신의 네임 서버에서 해당 호스트명과 매칭되는 ip주소가 있는지 확인한다.
+→ local DNS는 자신의 네임 서버에서 해당 호스트명과 매칭되는 ip주소가 있는지 확인한다. 없을 경우, 루트 DNS 서버에게 DNS 요청을 보낸다.
 
-- 없을 경우, 루트 DNS 서버에게 DNS 요청을 보낸다.
-
-  local DNS는 root DNS의 ip주소를 미리 알고 있다.
+> local DNS는 root DNS의 ip주소를 미리 알고 있다.
 
 → 루트 DNS는 ip주소를 찾고, 없으면 자신의 하위 레벨 DNS의 ip주소를 local DNS에게 응답한다.
 
@@ -1541,8 +1531,11 @@ DNS의 구성 요소로서,
 
 ---
 
-### DNS에 UDP를 사용하는 이유? `보충`
+### DNS에 UDP를 사용하는 이유?
+
+DNS는 작은 데이터를 교환하며, 굉장히 많은 클라이언트와 연결을 맺는다.
+
+- TCP는 아무리 적은 데이터라도 논리적 연결을 맺는 데 시간과 비용이 들며, 신뢰성 확보를 위해 다양한 처리를 한다.
+- UDP는 신뢰성을 보장하지 않아 오버헤드가 적게 들며, 그만큼 더 빠른 시간에, 더 많은 클라이언트와 통신을 주고 받을 수 있다.
 
 ---
-
-### DNS Round robin? `보충`

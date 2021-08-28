@@ -139,7 +139,6 @@ OSI 2계층(Data-link Layer)
 - ARP 테이블에서 TTL의 역할은?
 - ARP의 plug-and-play에 대해 설명?
 - 같은 LAN 상에서의 전송에서 ARP가 진행되는 과정은?
-- 다른 LAN으로의 전송에서 ARP가 진행되는 과정은?
 - DHCP(Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)란?
 - DHCP의 장단점?
 - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
@@ -159,14 +158,16 @@ OSI 4계층 / TCP/IP Transport Layer
 - 송신측이 수신측의 윈도우 사이즈를 어떻게 알 수 있을까?
 - 혼잡 제어(Congestion control란?
 - Transport Layer가 혼잡 제어를 제공하는 방법?
-- 혼잡 제어 알고리즘 AIMD(합 증가/곱 감소)란?
-- 혼잡 제어 알고리즘 Slow start(느린 시작)란?
-- 혼잡 제어 알고리즘 Fast retransmit(빠른 재전송)이란?
+- AIMD(합 증가/곱 감소)란?
+- Slow start(느린 시작)란?
+- Fast retransmit(빠른 재전송)이란?
 - Transport Layer가 오류 제어를 제공하는 방법?
 - TCP(Transmission Control Protocol)란?
+
+TCP & UDP
+
 - TCP의 특징은?
 - TCP가 UDP에 비해 속도가 느린 이유는?
-- TCP가 전이중 방식인 이유는?
 - TCP가 전송할 수 있는 데이터의 크기 제한은?
 - TCP에서 서버와 클라이언트가 몇 대 몇으로 연결될까?
 - TCP가 논리적 연결을 성립/해제하는 방법은?
@@ -201,8 +202,7 @@ DNS
 - 네임 서버의 종류는?
 - resolver란?
 - DNS가 사용하는 전송 계층(Transport Layer)의 프로토콜은?
-- DNS에 UDP를 사용하는 이유? `보충`
-- DNS Round robin? `보충`
+- DNS에 UDP를 사용하는 이유?
 
 [(목차로 돌아가기)](#table-of-contents)
 
@@ -825,7 +825,7 @@ this
 - JavaScript에서 (시간이 오래 걸리는) 동기적인 코드가 blocking을 일으키는 이유는 뭘까?
 - 프론트엔드에서 비동기 처리가 중요한 이유는?
 
-Promise
+콜백 패턴 & Promise
 
 - Promise란?
 - 동기식 작업과 비동기식 작업이란? 차이점은?
