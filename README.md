@@ -816,6 +816,7 @@ this
 - 유사 배열(arguments)이 배열의 메소드를 사용할 수 있도록(조작할 때) apply와 call을 사용하는 방법에 대해 아는지?
 - 암시적 바인딩과 명시적 바인딩의 우선 순위는?
 - arrow function에서의 this는 어떻게 동작하나?
+- arrow function을 사용하면 안되는 경우는?
 
 비동기 처리
 

@@ -66,6 +66,7 @@ this
 - 유사 배열(arguments)이 배열의 메소드를 사용할 수 있도록(조작할 때) apply와 call을 사용하는 방법에 대해 아는지?
 - 암시적 바인딩과 명시적 바인딩의 우선 순위는?
 - arrow function에서의 this는 어떻게 동작하나?
+- arrow function을 사용하면 안되는 경우는?
 
 비동기 처리
 
@@ -755,6 +756,58 @@ obj2.helloArrow(); // 'global contenxt'
 hello.call({ name: "chris" }); // 'chris'
 helloArrow.call({ name: "alice" }); // ''global contenxt'
 ```
+
+---
+
+### arrow function을 사용하면 안되는 경우는?
+
+1. 메소드: 화살표 함수로 메소드를 정의하는 것은 피해야 한다.
+
+   - 메소드로 정의한 화살표 함수 내부의 `this`는 메소드를 소유한 객체가 아닌, 상위 컨텍스트인 전역 객체를 가리킨다.
+   - 이와 같은 경우는 메소드 단축 표기법인 `ES6 축약 메소드 표현`을 사용하는 것이 좋다.
+
+   ```jsx
+   const person = {
+     name: "Lee",
+     // 화살표 함수
+     sayHi: () => console.log(`Hi, ${this.name}`),
+     // ES6 축약 메소드 표현
+     sayBye() {
+       console.log(`Bye, ${this.name}`);
+     },
+   };
+
+   person.sayHi(); // Hi, undefined
+   person.sayBye(); // Bye, Lee
+   ```
+
+2. 생성자 함수
+
+   - 화살표 함수는 생성자 함수로 사용할 수 없다. 화살표 함수는 `prototype` 프로퍼티를 가지고 있지 않다.
+
+   ```jsx
+   const Foo = () => {};
+   const foo = new Foo(); // TypeError: Foo is not a constructor
+   ```
+
+3. `addEventListener` 함수의 콜백 함수
+
+   - `addEventListener` 함수의 콜백 함수를 화살표 함수로 등록하면, `this`가 상위 컨텍스트인 전역 객체(`window`)를 가리킨다.
+   - 따라서, `addEventListener` 함수의 콜백 함수 내에서 `this`를 사용한다면 `function` 키워드로 정의한 일반 함수를 사용해야 한다. 일반 함수로 정의된 `addEventListener` 함수의 콜백 함수 내부 `this`는 이벤트 리스너에 바인딩된 요소(`currentTarget`)를 가리킨다.
+
+   ```jsx
+   var button = document.getElementById("myButton");
+
+   button.addEventListener("click", () => {
+     console.log(this === window); // true
+     this.innerHTML = "Clicked button";
+   });
+
+   button.addEventListener("click", function () {
+     console.log(this === button); // true
+     this.innerHTML = "Clicked button";
+   });
+   ```
 
 ---
 
