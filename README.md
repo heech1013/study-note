@@ -36,7 +36,7 @@ CS / Front-End를 공부하고 기록합니다.
 
 ## CS
 
-### [Network](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
+### [Network (→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
 
 OSI 7계층
 
@@ -210,7 +210,7 @@ DNS
 
 ---
 
-### [OS](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
+### [OS (→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
 
 운영체제
 
@@ -416,7 +416,7 @@ Blocking/Non-Blocking & Synchronous/Asynchronous
 
 ---
 
-### [Database](https://github.com/heech1013/tech-interview-handbook/blob/main/database/README.md)
+### [Database (→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/database/README.md)
 
 인덱스
 
@@ -490,7 +490,7 @@ DBMS
 
 ## Front-end
 
-### [Web](https://github.com/heech1013/tech-interview-handbook/blob/main/web/README.md)
+### [Web (→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/web/README.md)
 
 네트워크
 
@@ -750,7 +750,7 @@ JSON
 
 ---
 
-### [JavaScript](https://github.com/heech1013/tech-interview-handbook/blob/main/javascript/README.md)
+### [JavaScript (→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/javascript/README.md)
 
 언어의 특징
 
