@@ -38,7 +38,7 @@ CS / Front-End를 공부하고 기록합니다.
 
 ### Network
 
-### [(→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
 
 OSI 7계층
 
@@ -214,7 +214,7 @@ DNS
 
 ### OS
 
-### [(→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/os/README.md)
 
 운영체제
 
@@ -422,7 +422,7 @@ Blocking/Non-Blocking & Synchronous/Asynchronous
 
 ### Database
 
-### [(→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/database/README.md)
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/database/README.md)
 
 인덱스
 
@@ -498,7 +498,7 @@ DBMS
 
 ### Web
 
-### [(→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/web/README.md)
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/web/README.md)
 
 네트워크
 
@@ -760,7 +760,7 @@ JSON
 
 ### JavaScript
 
-### [(→ 답변 보러가기)](https://github.com/heech1013/tech-interview-handbook/blob/main/javascript/README.md)
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/javascript/README.md)
 
 언어의 특징
 
@@ -899,6 +899,7 @@ EcmaScript
 
 기타
 
+- 자바스크립트 배열도 객체일까? (배열의 내부 구조는?)
 - use strict란?
 
 [(목차로 돌아가기)](#table-of-contents)
