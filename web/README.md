@@ -2052,9 +2052,7 @@ Dynamic Page
 
 ---
 
-### SPA의 단점 - SEO 최적화 문제를 극복하기 위한 방법?
-
-- react에서 제공하는 SSR 사용
+### SPA의 단점 - SEO 최적화 문제를 극복하기 위한 방법? `보충`
 
 ---
 
@@ -2274,7 +2272,7 @@ Ajax를 이용하면, 페이지 전체를 요청해 로드하고 렌더링할 �
 
 ### Ajax를 사용하는 방법은? Ajax가 동작하는 원리는?
 
-브라우저는 XMLHttpRequest 객체를 이용해 Ajax 요청을 생성, 전송한다.
+브라우저는 XMLHttpRequest 객체, 또는 fetch API를 이용해 Ajax 요청을 생성, 전송한다.
 
 > - 서버가 브라우저의 요청에 대해 응답을 반환하면, 같은 XMLHttpRequest 객체가 그 결과를 처리한다.
 
@@ -2667,8 +2665,8 @@ HTML5
 
 추가된 요소
 
-- 구조적 요소(구역을 나누는 블록 요소인 div 요소를 대신(
+- 구조적 요소(구역을 나누는 블록 요소인 div 요소를 대신)  
   : header, nav, article, section, aside, footer
-- 멀티미디어 요소(플러그인 없이 멀티미디어 재생)
+- 멀티미디어 요소(플러그인 없이 멀티미디어 재생)  
   : audio, video, canvas
 - 기타: details, figure, figcaption
