@@ -171,11 +171,11 @@ $ SHOW INDEX FROM [테이블 명];
 ### = 연산과 <, >, between 연산의 예를 들어본다면?
 
 ```sql
-// =
+-- =
 SELECT * FROM member WHERE age = 27;
-// <, >
+-- <, >
 SELECT * FROM member WHERE age < 30;
-// BETWEEN
+-- BETWEEN
 SELECT * FROM member WHERE age BETWEEN 20 and 30;
 ```
 
@@ -204,7 +204,7 @@ SELECT * FROM member WHERE age BETWEEN 20 and 30;
 - 노드의 데이터 수가 n개라면, 자식 노드의 개수는 n+1개여야 한다.
 - 노드의 데이터는 정렬된 상태여야 한다.
 - 노드의 데이터를 기준으로, 노드의 데이터보다 작은 값들은 왼쪽 자식 노드에, 큰 값들은 오른쪽 자식 노드에 위치해야 한다.
-- 모든 리프 노드의 레벨은 같아야 한다. (→ "균형 트리")
+- 모든 리프 노드의 레벨은 같아야 한다. (B-tree: Balanced tree)
 
 ---
 
@@ -248,8 +248,8 @@ SELECT * FROM member WHERE age BETWEEN 20 and 30;
 
 ### 트랜잭션의 특징?
 
-- 사용자가 데이터베이스 시스템에 대해 서비스를 요구할 때, 시스템이 응답하기 위한 상태 변환 과정의 작업 단위
 - 하나의 트랜잭션은 commit되거나 rollback된다.
+- 트랜잭션은 사용자가 데이터베이스 시스템에 대해 서비스를 요구할 때, 시스템이 응답하기 위한 상태 변환 과정의 작업 단위이다.
 
 ---
 
@@ -316,7 +316,11 @@ Rollback
 
 테이블의 컬럼이 원자값을 갖도록 테이블을 구조화하는 것
 
+(예시 - 정규화 전)
+
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled.png)
+
+(예시 - 정규화 후)
 
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%201.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%201.png)
 
@@ -329,7 +333,11 @@ Rollback
 
 > 완전 함수 종속: 기본키의 부분 집합이 결정자가 되어서는 안된다는 것.
 
+(예시 - 정규화 전)
+
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%202.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%202.png)
+
+(예시 - 정규화 후)
 
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%203.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%203.png)
 
@@ -342,7 +350,11 @@ Rollback
 
 > 이행적 종속: A→B, B→C일 때 A→C가 성립되는 것.
 
+(예시 - 정규화 전)
+
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%204.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%204.png)
+
+(예시 - 정규화 후)
 
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%205.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%205.png)
 
@@ -353,7 +365,11 @@ Rollback
 제3 정규화를 진행한 테이블에 대해,
 모든 결정자가 후보키가 되도록 테이블을 구조화하는 것
 
+(예시 - 정규화 전)
+
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%206.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%206.png)
+
+(예시 - 정규화 후)
 
 ![Database%2079d9527d1d534251afb6af40532b918b/Untitled%207.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%207.png)
 
@@ -409,24 +425,24 @@ RDBMS를 조작할 때 사용하는 언어
 
 ```sql
 /* SELECT */
-> SELECT id, password FROM users;
+SELECT id, password FROM users;
 
-> SELECT * FROM users WHERE id=2 OR id=3; // 또는 AND
-> SELECT * FROM users WHERE NOT(id=2);
+SELECT * FROM users WHERE id=2 OR id=3; -- 또는 AND
+SELECT * FROM users WHERE NOT(id=2);
 
-> SELECT * FROM users WHERE nick LIKE '%hee%'; // 전방일치('%hee'), 후방일치('hee%')
+SELECT * FROM users WHERE nick LIKE '%hee%'; -- 전방일치('%hee'), 후방일치('hee%')
 
 /* INSERT */
-> INSERT INTO users VALUES(2, 'hee', 'gml3413@@', '2021-07-02');
-> INSERT INTO users (id, name, password, createdAt) VALUES(2, 'hee', 'gml3413@@', '2021-07-02');
+INSERT INTO users VALUES(2, 'hee', 'gml3413@@', '2021-07-02');
+INSERT INTO users (id, name, password, createdAt) VALUES(2, 'hee', 'gml3413@@', '2021-07-02');
 
 /* UPDATE */
-> UPDATE users SET name=NULL; // WHERE 절이 없으면 모든 행이 수정됨.
-> UPDATE users SET name='lee', createdAt='2021-07-19' WHERE id=2;
+UPDATE users SET name=NULL; -- WHERE 절이 없으면 모든 행이 수정됨.
+UPDATE users SET name='lee', createdAt='2021-07-19' WHERE id=2;
 
 /* DELETE */
-> DELETE FROM users; // 모든 행 삭제
-> DELETE FROM users WHERE id=2;
+DELETE FROM users; -- 모든 행 삭제
+DELETE FROM users WHERE id=2;
 ```
 
 ---
@@ -449,10 +465,10 @@ RDBMS를 조작할 때 사용하는 언어
 ```sql
 > SELECT girl_group.id, girl_group.name, song.title
   FROM girl_group
-  JOIN song // SQL에서 INNER JOIN은 간략히 JOIN으로 사용할 수 있다.
+  JOIN song -- SQL에서 INNER JOIN은 간략히 JOIN으로 사용할 수 있다.
   WHERE girl_group.hit_song_id = song.id;
 
-// 만일 girl_group 중 hit_song_id가 NULL인 행이 있을 경우, 결과에 포함되지 않는다.
+-- 만일 girl_group 중 hit_song_id가 NULL인 행이 있을 경우, 결과에 포함되지 않는다.
 ```
 
 ---
@@ -475,7 +491,7 @@ RDBMS를 조작할 때 사용하는 언어
   LEFT JOIN song
   WHERE girl_group.hit_song_id = song.id;
 
-// girl_group 중 hit_song_id가 NULL인 행도 결과에 포함된다.
+-- girl_group 중 hit_song_id가 NULL인 행도 결과에 포함된다.
 ```
 
 > - LEFT JOIN과 LEFT OUTER JOIN는 같은 용어이다.
@@ -494,7 +510,7 @@ A CROSS JOIN B 는 (a,1), (a, 2), (a,3), (b,1), (b,2), (b,3), (c, 1), (c,2), (c,
   FROM girl_group
   CROSS JOIN song;
 
-// 위 CROSS JOIN은 다음과 같이 나타낼 수도 있다.
+-- 위 CROSS JOIN은 다음과 같이 나타낼 수도 있다.
 > SELECT girl_group.id, girl_group.name, song.title
   FROM girl_group, song;
 ```
@@ -506,13 +522,13 @@ A CROSS JOIN B 는 (a,1), (a, 2), (a,3), (b,1), (b,2), (b,3), (c, 1), (c,2), (c,
 JOIN하는 범위가 다르다.
 
 ```sql
-// 1번 쿼리
+-- 1번 쿼리
 > SELECT *
   FROM A LEFT JOIN B
 	ON (A.id = B.id)
 	WHERE B.foo = 3;
 
-// 2번 쿼리
+-- 2번 쿼리
 > SELECT *
 	FROM A LEFT JOIN B
 	ON (A.id = B.id AND B.foo = 3);
