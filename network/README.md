@@ -1230,52 +1230,66 @@ TCP에서는 서버와 클라이언트가 1:1로 연결된다.
 
 ### 3-way handshake의 과정에 대해 설명해본다면?
 
-최초: 두 프로세스 A, B에 대하여
+최초의 클라이언트와 서버에 대해
 
-- (상태) A: `CLOSED`, B: `LISTEN`
+- (상태) 클라이언트: `CLOSED`, 서버: `LISTEN`
 
-A → B
+> - 클라이언트가 서버로 연결 요청을 하기 이전에, 서버는 (연결 요청에 대한 준비로) port를 listen하고 있어야 한다. 이를 passive open이라고 한다.
+> - 클라이언트가 서버에게 연결 요청을 보냄으로써 3-way handshake를 시작하는 것을 active open이라고 한다.
 
-- A가 B에게 연결 요청 메시지 SYN을 전송.
+클라이언트 → 서버
 
-  SYN 메시지는 Sequence Number 필드에 임의의 숫자 값을 지정되었고, SYN flag 비트를 1로 설정한 세그먼트이다.
+- 클라이언트가 서버에게 연결 요청 메시지 `SYN`을 전송.
 
-- (상태) A: `CLOSED`, B: `SYN_RSV`
+  - `SYN` 메시지는 `SYN` flag 비트를 1로 설정한 세그먼트이다.
+  - `SYN`의 sequence number에는 클라이언트가 랜덤으로 선택한 값(ex: `A`)이 담겨진다.
 
-B → A
+- (상태) 클라이언트: `CLOSED`, 서버: `SYN_RSV`
 
-- B는 A에게 SYN + ACK을 전송해서, 요청 수락과 동시에 A도 포트를 열어달라는 메시지를 보낸다.
+클라이언트 <- 서버
 
-  A가 보낸 Sequence Number에 1을 더한 값과 이전 SYN 값에 대한 응답 ACK Number 필드와 함께, SYN과 ACK 비트가 1인 세그먼트이다.
+- 서버는 클라이언트에게 `SYN` + `ACK`을 전송해서, 요청 수락과 동시에 클라이언트도 포트를 열어달라는 메시지를 보낸다.
 
-- (상태) A: `CLOSED`, B: `SYN_RSV`
+  - `SYN-ACK` 메시지는 `SYN`과 `ACK` 비트가 1인 세그먼트이다.
+  - acknowledgement number는 이전에 클라이언트가 `SYN`에 담아 보낸 sequence number에 1을 더한 값(ex: `A+1`)으로 설정된다.
+  - sequence number에는 서버가 랜덤으로 선택한 값(ex: `B`)이 담겨진다.
 
-A → B
+- (상태) 클라이언트: `CLOSED`, 서버: `SYN_RSV`
 
-- A는 B에게 수락 메시지 ACK을 보낸다.
-- (상태) A: `ESTABILISHED`, B: `ESTABILISHED`
+클라이언트 → 서버
+
+- 클라이언트는 서버에게 수락 메시지 `ACK`을 보낸다.
+  - sequence number는 이전에 받은 acknowledgement number(ex: `A+1`)로 설정된다.
+  - acknowledgement number는 이전에 받은 sequence number에 1을 더한 값(ex: `B+1`)으로 설정된다.
+- (상태) 클라이언트: `ESTABILISHED`, 서버: `ESTABILISHED`
 
 ---
 
 ### 4-way handshake의 과정에 대해 설명해본다면?
 
+![Network%200208784d439545d2a6f93e6c5c4355bc/connection-termination.png](Network%200208784d439545d2a6f93e6c5c4355bc/connection-termination.png)
+
 최초
 
-- A: `ESTABILISHED`, B: `ESTABILISHED`
+- (상태) 클라이언트: `ESTABILISHED`, 서버: `ESTABILISHED`
 
-A → B
+클라이언트 → 서버
 
-- A가 연결 종료를 요청하는 FIN 메시지를 B에게 전송
+- 클라이언트가 연결 종료를 요청하는 `FIN` 메시지를 서버에게 전송
+- (상태) 클라이언트: `FIN_WAIT_1`, 서버: `ESTABILISHED`
 
-B → A
+서버 → 클라이언트
 
-- B는 A에게 일단 확인 메시지 ACK을 보낸다.
-- 그리고, B는 자신의 통신이 끝날 때까지 마저 전송하며 기다린다.
-- B의 통신이 끝나면, A에게 연결 종료 요청에 합의한다는 의미로 FIN 메시지를 보낸다.
+- 서버는 클라이언트에게 일단 확인 메시지 `ACK`을 보낸다.
+  > (상태) 클라이언트: `FIN_WAIT_2`(active close), 서버: `CLOSE_WAIT` (passive close)
+- 그리고, 서버는 자신의 통신이 끝날 때까지 마저 전송하며 기다린다.
+- 서버의 통신이 끝나면, 클라이언트에게 연결 종료 요청에 합의한다는 의미로 `FIN` 메시지를 보낸다.
+  > - (상태) 클라이언트: `TIME_WAIT`, 서버: `LAST_ACK`
+  > - 클라이언트는 `TIME_WAIT` 상태에서 최종적으로 연결을 닫기 전까지 일정 시간을 기다린다(연결을 닫혀있다는 것은, 해당 local port가 새로운 연결을 맺을 수 없는 상태를 말한다). 이는 전송이 지연된 패킷이 뒤늦게 도착해 혼동이 생기는 것을 방지하기 위함이다.
 
-A → B
+클라이언트 → 서버
 
-- A는 B에게 확인했다는 메시지를 보낸다.
+- 클라이언트는 서버에게 확인했다는 메시지 `ACK`를 보낸다.
 
 ---
 
