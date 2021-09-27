@@ -242,17 +242,26 @@ DNS
 - 멀티 프로그래밍과 멀티 태스킹의 차이는?
 - 멀티 스레딩(multi-threading)이란?
 - 멀티 프로그래밍와 멀티 스레드의 차이점?
+- 멀티 프로세스와 멀티 스레드의 차이점은?
+- 멀티 프로세스가 필요한 이유는?
 
 스케줄링
 
 - Context Switching이란?
-- Context란?
+- Context Switching이 필요한 이유는?
+- Context Switching이 진행되는 과정은?
 - Context에는 예를 들어 어떤 정보들이 있을까?
+- Context Switching는 어떤 상황에서 진행될까?
 - PCB(Process Control Block)란?
+- PCB가 가지고 있는 정보에는 어떤 것들이 있을까?
 - PCB가 생성되는 시점은?
 - PCB가 위치한 곳은?
 - Context Switching이 필요한 이유는?
 - 프로세스의 상태가 전이되는 과정은? (프로세스 상태 전이도의 흐름은?)
+- 시스템 콜(System Call)이란?
+- 시스템 콜이 필요한 이유는?
+- 커널 모드(Kernel mode)와 사용자 모드(User mode)란?
+- 커널 모드가 필요한 이유는?
 - 프로세스가 종료되면(terminated) PCB도 함께 제거될까?
 - 스케줄링이 필요한 이유는?
 - 시스템의 성능을 어떤 기준으로 측정할까?
@@ -412,7 +421,8 @@ Blocking/Non-Blocking & Synchronous/Asynchronous
 - Non-Blocking + Async ?
 - Non-Blocking + Sync ?
 - Blocking + Async ?
-- Reference
+
+Reference
 
 [(목차로 돌아가기)](#table-of-contents)
 
