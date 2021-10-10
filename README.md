@@ -17,8 +17,6 @@ CS / Front-End를 공부하고 기록합니다.
 
 </div>
 
----
-
 <br>
 
 ## Table of Contents
@@ -130,7 +128,6 @@ OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층 `보�
 TCP/IP 4계층(Application Layer, 응용 계층)
 
 - 응용 계층이란?
-- 응용 계층의 프로토콜에는 어떤 것들이 있을까?
 
 DNS
 
@@ -209,13 +206,8 @@ DNS
 - 스케줄링이 필요한 이유는?
 - 시스템의 성능을 어떤 기준으로 측정할까?
 - (참고) 용어
-- 스케줄링의 주기에 따라 3가지로 나눈다면 어떻게 나뉠까?
-- 장기 스케줄링이란? 예시는?
-- 중기 스케줄링이란? 예시는?
-- 단기 스케줄링이란? 예시는?
+- 스케줄링의 주기에 따라 3가지로 나눈다면?
 - 선점형 스케줄링과 비선점형 스케줄링의 차이?
-- 선점형 스케줄링의 장단점?
-- 비선점형 스케줄링의 장단점?
 - 자원 관리에 있어서 time sharing과 space sharing의 차이는?
 - FCFS(First Come First Service)란?
 - FCFS의 장단점?
