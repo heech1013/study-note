@@ -44,13 +44,14 @@ OSI 7계층
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
 
-OSI 1계층(물리 계층, Physical Layer)
+OSI Physical Layer(물리 계층, 1계층)
 
-- OSI 1계층(물리 계층, Physical Layer)이란?
+- OSI Physical Layer란?
 
 OSI 2계층(Data-link Layer)
 
 - OSI 2계층(Data-link Layer)이란?
+- TCP/IP Network layer(1계층)란?
 - 데이터 링크 계층의 주요 역할은?
 - 2계층에서 데이터가 hop-by-hop으로 전달된다는 것의 의미는 무엇일까?
 - 프레이밍이란?
@@ -72,9 +73,9 @@ OSI 2계층(Data-link Layer)
 - 이더넷의 특징?
 - 이더넷의 장단점?
 
-(OSI) 3계층 Network Layer & (TCP/IP) 2계층 Internet Layer
+OSI Network Layer(3계층) & TCP/IP Internet Layer(2계층)
 
-- OSI Network layer, TCP/IP Internet layer란?
+- OSI Network layer(TCP/IP Internet layer)란?
 - 라우터란?
 - 라우팅이란?
 - 정적 라우팅과 동적 라우팅이란?
@@ -97,7 +98,7 @@ OSI 2계층(Data-link Layer)
 - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
 - DHCP가 ip주소를 임대해주는 절차? `보충`
 
-OSI 4계층 Transport Layer & TCP/IP 3계층 Transport Layer
+OSI Transport Layer(4계층) & TCP/IP Transport Layer(3계층)
 
 - Transport Layer란?
 - network layer(3계층)와 Transport Layer(4계층)와의 차이점은?
@@ -123,9 +124,7 @@ TCP & UDP
 - 4-way handshake의 과정에 대해 설명해본다면?
 - 왜 2-way handshake는 성립될 수 없을까?
 
-OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층 `보충`
-
-TCP/IP 4계층(Application Layer, 응용 계층)
+OSI Application Layer(응용 계층, 7계층) & TCP/IP Application Layer(4계층)
 
 - 응용 계층이란?
 

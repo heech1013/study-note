@@ -8,13 +8,14 @@ OSI 7계층
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
 
-OSI 1계층(물리 계층, Physical Layer)
+OSI Physical Layer(물리 계층, 1계층)
 
-- OSI 1계층(물리 계층, Physical Layer)이란?
+- OSI Physical Layer란?
 
 OSI 2계층(Data-link Layer)
 
 - OSI 2계층(Data-link Layer)이란?
+- TCP/IP Network layer(1계층)란?
 - 데이터 링크 계층의 주요 역할은?
 - 2계층에서 데이터가 hop-by-hop으로 전달된다는 것의 의미는 무엇일까?
 - 프레이밍이란?
@@ -36,9 +37,9 @@ OSI 2계층(Data-link Layer)
 - 이더넷의 특징?
 - 이더넷의 장단점?
 
-(OSI) 3계층 Network Layer & (TCP/IP) 2계층 Internet Layer
+OSI Network Layer(3계층) & TCP/IP Internet Layer(2계층)
 
-- OSI Network layer, TCP/IP Internet layer란?
+- OSI Network layer(TCP/IP Internet layer)란?
 - 라우터란?
 - 라우팅이란?
 - 정적 라우팅과 동적 라우팅이란?
@@ -61,7 +62,7 @@ OSI 2계층(Data-link Layer)
 - DHCP에서 IP 주소를 할당 받으면 영원히 사용할 수 있을까?
 - DHCP가 ip주소를 임대해주는 절차? `보충`
 
-OSI 4계층 Transport Layer & TCP/IP 3계층 Transport Layer
+OSI Transport Layer(4계층) & TCP/IP Transport Layer(3계층)
 
 - Transport Layer란?
 - network layer(3계층)와 Transport Layer(4계층)와의 차이점은?
@@ -87,9 +88,7 @@ TCP & UDP
 - 4-way handshake의 과정에 대해 설명해본다면?
 - 왜 2-way handshake는 성립될 수 없을까?
 
-OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층 `보충`
-
-TCP/IP 4계층(Application Layer, 응용 계층)
+OSI Application Layer(응용 계층, 7계층) & TCP/IP Application Layer(4계층)
 
 - 응용 계층이란?
 
@@ -136,9 +135,9 @@ DNS
 > - osi는 실제 개발된 사례가 많이 없어서 신뢰도가 떨어지는 반면,
 >   tcp/ip는 계속적으로 실제 개발되고, 발전되면서 실질적인 표준이 되었다.
 
-## OSI 1계층(물리 계층, Physical Layer)
+## OSI Physical Layer(물리 계층, 1계층)
 
-### OSI 1계층(물리 계층, Physical Layer)이란?
+### OSI Physical Layer란?
 
 물리적으로 연결된 두 대의 컴퓨터가 디지털 신호를 주고 받도록 해주는 모듈.
 
@@ -154,16 +153,25 @@ DNS
 
 ---
 
-## OSI 2계층(Data-link Layer)
+## OSI Data-link Layer(2계층)
 
-### OSI 2계층(Data-link Layer)이란?
+### OSI Data-link Layer란?
 
-- "직접 연결된" 서로 다른 2개의 네트워킹 장치 간의 데이터 전송을 담당하는 모듈.
+- "직접 연결된(인접한)" 서로 다른 2개의 네트워킹 장치 간의 데이터 전송을 담당하는 모듈.
 - 물리 계층으로부터 받은 데이터가 네트워크 장치에 올바르게 안착될 수 있도록 하는 역할을 한다.
 
-> - 2계층의 PDU은 프레임(Frame)이다.
+> - data-link layer의 PDU은 프레임(Frame)이다.
 > - 어느 방향으로 가야 하는지는 상위 프로토콜(네트워크 계층)이 책임진다. 데이터링크 계층은 상위 프로토콜이 가리키는 곳으로 데이터를 전송할 뿐이다.
 > - LAN에서 데이터를 주고 받기 위해 필요하다.
+
+---
+
+### TCP/IP Network (Interface) layer(1계층)란?
+
+- 물리적 연결을 포함해, "직접 연결된(인접한)" 서로 다른 2개의 네트워킹 장치 간의 데이터 전송을 담당하는 모듈.
+
+> - TCP/IP의 network layer는 OSI physical layer와 data-link layer에 해당한다.
+> - network layer의 PDU은 프레임(Frame)이다.
 
 ---
 
@@ -393,9 +401,9 @@ LAN에서 사용하기 위해 개발된 유선 통신망 기술.
 
 ---
 
-## (OSI) 3계층 Network Layer & (TCP/IP) 2계층 Internet Layer
+## OSI Network Layer(3계층) & TCP/IP Internet Layer(2계층)
 
-### OSI Network layer, TCP/IP Internet layer란?
+### OSI Network layer(TCP/IP Internet layer)란?
 
 - 데이터 전송 과정에서 라우팅(routing)과 포워딩(forwarding)을 통해 전송 경로를 결정해주는 모듈.
 - 데이터를 종단 목적지까지 가장 안전하고 빠르게 전달하는 기능을 한다.
@@ -668,7 +676,7 @@ IP 주소와 MAC 주소가 일대일로 매칭되어 있는 테이블.
 
 ---
 
-## OSI 4계층 Transport Layer & TCP/IP 3계층 Transport Layer
+## OSI Transport Layer(4계층) & TCP/IP Transport Layer(3계층)
 
 ### Transport Layer란?
 
@@ -1070,19 +1078,28 @@ UDP
 
 ---
 
-## OSI 5계층(Session Layer) / OSI 6계층(Presentation Layer) / OSI 7계층(Application Layer) `보충`
+## OSI Application Layer(응용 계층, 7계층) & TCP/IP Application Layer(4계층)
 
-## TCP/IP 4계층(Application Layer, 응용 계층)
+> OSI Session Layer(5계층)
+>
+> - 응용 프로그램간 세션을 지원하는 계층.
+> - 세션 설정, 통신 응답 대기시간 등 세션과 관련된 작업을 처리한다.
+>
+> OSI Presentation Layer(6계층)
+>
+> - 데이터가 표현되는 방식을 담당하는 계층.
+> - 데이터의 암호화 및 복호화, 인코딩(ASCII 등) 및 디코딩, 데이터 표현 형식(JPG, JPEG 등)을 처리한다.
 
-### 응용 계층이란?
+### Application Layer란?
 
 - 어플리케이션 간 데이터 교환을 담당하는 모듈
 - 사용자가 어플리케이션과 상호작용할 수 있도록 인터페이스를 제공
 
-> 응용 계층의 프로토콜
+> - TCP/IP의 application layer는 OSI session layer, presentation layer, application layer에 해당한다.
+> - 응용 계층의 프로토콜
 >
->- TCP 기반: HTTP 등
->- UDP 기반: DNS, DHCP 등
+>   - TCP 기반: HTTP 등
+>   - UDP 기반: DNS, DHCP 등
 
 ---
 
