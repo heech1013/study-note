@@ -26,6 +26,7 @@ CS / Front-End를 공부하고 기록합니다.
 - [Network](#network)
 - [OS](#os)
 - [Database](#database)
+- [Data Structure & Algorithm](#data-structure--algorithm)
 
 [Front-End](#front-end)
 
@@ -424,6 +425,28 @@ DBMS
 - DBMS란?
 - DBMS를 사용했을 때의 장점은?
 - RDBMS란?
+
+[(목차로 돌아가기)](#table-of-contents)
+
+<br>
+
+---
+
+### Data Structure & Algorithm
+
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/data-structure-and-algorithm/README.md)
+
+Data Structure
+
+- 스택과 큐에 대해 설명해본다면?
+- 연결 리스트(Linked List)란?
+- 그래프와 트리란?
+- 이진 탐색 트리(Binary Search Tree, BST)란?
+- 이진 탐색 트리의 연산에 대해 설명해본다면?
+- 불균형한 이진 탐색 트리의 검색 연산을 보완하기 위한 방법은?
+- 힙이란?
+- 힙의 삽입과 삭제 연산에 대해 설명해본다면?
+- 우선순위큐를 구현하는 방법에는 어떤 것들이 있을까?
 
 [(목차로 돌아가기)](#table-of-contents)
 
