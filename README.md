@@ -453,6 +453,7 @@ Data Structure
 Algorithm
 
 - 정렬의 종류에는 어떤 것들이 있을까?
+- 퀵 소트의 피벗 지정 방식을 어떻게 개선할 수 있을까?
 
 [(목차로 돌아가기)](#table-of-contents)
 
