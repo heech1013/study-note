@@ -333,12 +333,14 @@ function selectionSort(arr) {
 장점
 
 - 구현이 간단하고 직관적이다.
-- 거품 정렬에 비해 swap 연산이 적게 일어나 비교적 효율적이다.
+- 정렬을 의한 비교 횟수는 많으나, 교환 횟수가 적어 효율적이다.
+- 역순으로 정렬되어 있는 배열을 정렬할 때 좋은 효율을 보인다.
 - 제자리 정렬로, 다른 메모리 공간을 필요로 하지 않는다.
 
 단점
 
 - 비효율적 시간 복잡도
+- 이미/거의 정렬되어 있는 배열을 정렬할 때 최악의 처리 속도를 보인다.
 - 불안정 정렬(unstable sort)이다.
 
 --
@@ -376,7 +378,7 @@ function insertionSort(arr) {
 장점
 
 - 구현이 간단하고 직관적이다.
-- 대부분의 원소가 거의 정렬되어 있는 경우 매우 효율적인 알고리즘이다.
+- 대부분의 원소가 거의 정렬되어 있는 경우 매우 효율적인 알고리즘이다. (이미 정렬된 요소는 한 번의 비교만 수행하고 교환 연산은 발생하지 않는다.)
 - 크기가 작은 배열에 대해 성능이 좋다.
 - 제자리 정렬이다.
 - 안정 정렬이다.
@@ -454,7 +456,68 @@ function partition(arr, left, right) {
 - 최악의 경우 비효율적인 시간 복잡도(단, 개선이 가능하다.)
 - 불안정 정렬이다.
 
-> Reference: https://gyoogle.dev/blog/algorithm
+--
+
+5. 병합(합병) 정렬(Merge sort)
+
+- 배열을 쪼갤 수 있는 만큼 쪼갠 후, 순서를 정렬해가며 다시 병합하는 알고리즘.
+
+> - 분할 정복(Divide and Conquer)을 사용하는 정렬 알고리즘이다.
+
+```jsx
+function mergeSort(arr, left, right) {
+  if (left < right) {
+    const mid = (left + right) / 2;
+
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid + 1, right);
+    merge(arr, left, mid, right);
+  }
+}
+
+function merge(arr, left, mid, right) {
+  const L = arr.slice(left, mid + 1);
+  const R = arr.slice(mid + 1, right + 1);
+
+  let i = 0,
+    j = 0,
+    k = left;
+
+  while (i < L.length && j < R.length) {
+    if (L[i] <= R[j]) {
+      arr[k++] = L[i++];
+    } else {
+      arr[k++] = R[j++];
+    }
+    k++;
+  }
+
+  // remain
+  while (i < L.length) {
+    arr[k++] = L[i++];
+  }
+  while (j < R.length) {
+    arr[k++] = R[j++];
+  }
+}
+```
+
+분석
+
+- 시간 복잡도: 매 순회마다 1/2의 크기로 배열을 분할하므로, mergeSort()가 재귀적으로 `logn`번 호출, 각 호출에서 n개의 원소를 순회하며 정렬을 진행하므로 `O(logn * n)` = `O(nlogn)`
+- 공간 복잡도: 병합 과정에서 추가 배열이 필요하다. 상수항 제거로, `O(n)`
+
+장점
+
+- 효율적인 시간 복잡도
+- 데이터의 특성과 별개로 일정한 시간 복잡도 `O(nlogn)`를 보인다.
+- 순차적으로 데이터를 비교하며 정렬하기 때문에, 연결 리스트를 정렬할 때 효율적이다. (반면 퀵 소트는 임의 접근으로, 연결 리스트를 정렬할 때 비효율적이다. 연결 리스트는 삽입과 삭제 연산은 효율적이지만 탐색/접근 연산은 `O(n)`으로 비효율적이기 때문이다.)
+- 안정 정렬이다.
+
+단점
+
+- 제자리 정렬이 아니다.
+- 이동 횟수가 많아, 레코드의 크기가 큰 경우 상대적으로 시간이 더 소요된다.
 
 ---
 

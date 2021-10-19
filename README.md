@@ -33,6 +33,8 @@ CS / Front-End를 공부하고 기록합니다.
 - [Web](#web)
 - [JavaScript](#javascript)
 
+[Reference](#Reference)
+
 ## CS
 
 ### Network
@@ -872,6 +874,19 @@ EcmaScript
 [(목차로 돌아가기)](#table-of-contents)
 
 <br>
+
+## Reference
+
+- [CS144 Introduction to Computer Networking Fall 2016 Stanford University](https://www.youtube.com/playlist?list=PLvFG2xYBrYAQCyz4Wx3NPoYJOFjvU7g2Z)
+- [최희준 교수의 컴퓨터 일반](https://www.youtube.com/channel/UC7Gm_n3bUqqbOiDR3E1U2qg)
+- [Operating System, CPA310, KOREATECH](https://www.youtube.com/playlist?list=PLBrGAFAIyf5rby7QylRc6JxU5lzQ9c4tN)
+- [운영체제: 아주 쉬운 세가지 이야기](https://github.com/remzi-arpacidusseau/ostep-translations/tree/master/korean)
+- [별걸다하는 IT - 운영체제](https://jhnyang.tistory.com/category/%EB%B3%84%EA%B1%B8%EB%8B%A4%ED%95%98%EB%8A%94%20IT/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%20OS)
+- [NHN TOAST FE Guide](https://ui.toast.com/fe-guide/ko)
+- [PoiemaWeb](https://poiemaweb.com/)
+- [Interview Question for Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
+- [Tech Interview for Developer](https://gyoogle.dev/blog/)
+- [Gidhub - Technology](https://goodgid.github.io/category/#Technology)
 
 ---
 
