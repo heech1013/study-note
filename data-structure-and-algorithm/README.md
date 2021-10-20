@@ -519,6 +519,97 @@ function merge(arr, left, mid, right) {
 - 제자리 정렬이 아니다.
 - 이동 횟수가 많아, 레코드의 크기가 큰 경우 상대적으로 시간이 더 소요된다.
 
+--
+
+6. 힙 정렬(Heap sort)
+
+- 최대 힙 트리, 또는 최소 힙 트리를 구축해 정렬을 수행하는 알고리즘
+
+> - 오름차순을 위해서는 **최대** 힙을, 내림차순을 위해서는 **최소** 힙을 구축한다.
+> - 힙 생성 알고리즘(heapify algorithm)은 하나의 특정 노드에 대해서만 수행하는 알고리즘이며, 해당 노드를 제외하고는 최대/최소 힙이 구성되어 있는 상태라는 전제가 필요하다. 특정 노드의 두 자식 노드 중 더 큰 자식과 자신의 위치를 바꾸는 알고리즘이다.
+> - 보통 힙을 구성할 때는 노드 조작을 편리하게 하기 위해 첫번째 인덱스를 비워둔다(인덱스 1부터 시작). 그러나 힙 정렬은 기존 배열을 정렬해야 하므로, 인덱스 0부터 시작한다.
+
+힙 정렬 과정(오름차순 기준)
+
+1. 오름차순일 경우, 기존 배열로 최대 힙을 구성한다.
+
+   - 최소 힙은 그 자체로 오름차순 배열이 되지 못한다. 반정렬 상태이기 때문이다.
+   - 가장 작은 서브 트리부터 순차적으로 최대 힙을 만족하도록 구성한다. 루트를 부모로 가지는 가장 큰 서브 트리를 마지막으로 전체 배열이 최대 힙을 만족하게 된다. (가장 작은 서브 트리의 루트는 가장 마지막 노드의 부모 트리이다.)
+   - 특정 서브 트리에서 부모-자식 교환이 일어났을 경우, 교환된 자식 노드의 서브 트리에서 (재귀적으로, 혹은 순차적으로) 다시 heapify를 수행한다.
+
+2. 루트 노드를 순차적으로 pop해, 배열의 맨 뒤부터 차례대로 삽입한다.
+
+```jsx
+const parent = (i) => (i - 1) / 2;
+const left = (i) => i * 2 + 1;
+const right = (i) => i * 2 + 2;
+
+function heapSort(arr) {
+  if (size < 2) return;
+
+  // 가장 마지막(오른쪽 끝) 서브 트리의 부모 노드부터 시작해,
+  // 루트 노드까지 순회하며 재귀적으로 heapify를 수행한다.
+  for (let parentIdx = parent(arr.length - 1); parentIdx >= 0; parentIdx--) {
+    heapify(arr, parentIdx, arr.length);
+  }
+
+  // 루트 노드와 마지막 요소를 교환함으로써,
+  // 배열의 맨 뒤부터 가장 값이 큰 요소로 채운다.
+  // (해당 노드는 다음 순회에서 제외된다)
+  for (let i = arr.length - 1; i > 0; i--) {
+    [arr[0], arr[i]] = [arr[i], arr[0]];
+    heapify(arr, 0, i - 1);
+  }
+}
+
+function heapify(arr, parentIdx, lastIdx) {
+  // let leftChildIdx, rightChildIdx;
+  // let largestIdx;
+
+  // 자식 인덱스가 마지막 인덱스를 넘지 않을 때까지 반복.
+  // 단, 왼쪽 자식 인덱스를 기준으로 해야 왼쪽 자식이 마지막 인덱스인 경우를 조건에 포함할 수 있다.
+  while (
+    left(parentIdx) <= lastIdx &&
+    // 부모 노드보다 더 큰 자식이 있을 때
+    (arr[left(parentIdx)] > arr[parentIdx] ||
+      (right(parentIdx) <= lastIdx && arr[right(parentIdx)] > arr[parentIdx]))
+  ) {
+    const greaterChildIdx =
+      right(parentIdx) <= lastIdx &&
+      arr[right(parentIdx)] > arr[left(parentIdx)]
+        ? right(parentIdx)
+        : left(parentIdx);
+
+    // swap
+    [arr[parentIdx], arr[greaterChildIdx]] = [
+      arr[greaterChildIdx],
+      arr[parentIdx],
+    ];
+    parentIdx = greaterChildIdx;
+  }
+}
+```
+
+분석
+
+- 시간 복잡도
+  - heapify를 통해 최대/최소 힙을 구성하는 시간: 부모 노드의 개수는 `n/2`(소수점 절삭), heapify는 최대 트리의 높이만큼 수행하므로 `logn`의 시간이 소요된다. 따라서 `n/2*logn ~= nlogn`
+  - 루트를 배열 끝으로 넘기고 heapify를 수행하는 시간: 모든 요소에 대해 heapify를 수행하므로, `nlogn`
+  - 따라서, 시간 복잡도는 `O(nlogn + nlogn) = O(nlogn)`
+- 공간 복잡도: 제자리 정렬로, `O(n)`
+
+장점
+
+- 효율적인 시간 복잡도
+- 최악의 경우에도 `O(nlogn)`의 시간 복잡도를 보인다.
+- 정렬된 상태의 전체 배열이 아니라, 가장 크거나 작은 값 몇개만 필요할 때 더 효율적이다.
+- 제자리 정렬이다.
+
+단점
+
+- 일반적인 `O(nlogn)` 정렬 알고리즘에 비해 비교적 성능이 떨어진다.
+- 불안정 정렬이다(최대/최소 힙을 구성하는 과정에서 불안정 정렬 상태가 된다).
+
 ---
 
 ### 퀵 소트의 피벗 지정 방식을 어떻게 개선할 수 있을까?
