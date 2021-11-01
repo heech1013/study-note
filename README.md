@@ -190,32 +190,18 @@ DNS
 - 시스템 콜(System Call)이란?
 - 시스템 콜이 필요한 이유는?
 - 커널 모드(Kernel mode)와 사용자 모드(User mode)란?
-- 스케줄링이 필요한 이유는?
 - 시스템의 성능을 어떤 기준으로 측정할까?
 - (참고) 용어
 - 스케줄링의 주기에 따라 3가지로 나눈다면 어떻게 나뉠까?
 - 선점형 스케줄링과 비선점형 스케줄링의 차이?
 - 자원 관리에 있어서 time sharing과 space sharing의 차이는?
 - FCFS(First Come First Service)란?
-- FCFS의 장단점?
-- FCFS에 적합한 시스템은?
-- 배치 시스템(배치 처리, batch system, batch process)란?
 - Round Robin이란?
-- Round Robin의 장단점?
-- time quantum이 짧을 때와 길 때 성능에 어떤 영향을 미칠까?
-- Round Robin은 어떤 서비스에 적합할까?
 - SPN(Shortest Process Next)이란?
-- SPN의 장단점
-- 시스템 내 프로세스 수를 적게 유지했을 때의 좋은 점은?
 - SRTN(Shortest Remaining Time Next)란?
-- SRTN의 장단점?
 - HRRN(High Response Ratio Next)이란?
-- HRRN의 장단점?
 - MLQ(Multi Level Queue)란?
-- MLQ의 장단점?
 - MFQ(Multi level Feedback Queue)란?
-- feedback에는 어떤 것들이 있을까?
-- MFQ의 장단점?
 
 동기화
 
@@ -234,14 +220,13 @@ DNS
 - TAS를 이용해 ME가 보장되는 과정을 조금 더 자세히 설명? (코드로 설명?)
 - OS로 구현한 상호 배제 알고리즘에는 어떤 것들이 있나?
 - 스핀락이란?
-- 스핀락의 장단점은?
 - 스핀락은 어떤 특성의 프로세스에서 사용하기 적절할까?
 - 뮤텍스란?
 - 뮤텍스는 어떤 상황에서 사용하기 적절할까?
-- 스핀락과 뮤텍스의 차이점?
+- 스핀락과 뮤텍스의 차이점은?
 - 세마포어란?
 - 세마포어에 사용되는 연산의 종류와 그 로직은?
-- 스핀락(혹은 뮤텍스)와 세마포어의 차이는?
+- 스핀락/뮤텍스와 세마포어의 차이는?
 
 데드락
 
