@@ -46,6 +46,7 @@ OSI 7계층
 - OSI 7계층이란?
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
+- 주소창에 www.naver.com을 입력 후 접속했을 때의 무슨 일이 일어날까?
 
 OSI Physical Layer(물리 계층, 1계층)
 
@@ -164,38 +165,24 @@ DNS
 프로세스와 스레드
 
 - 프로세스란?
-- 프로그램이란?
-- 프로세스와 자원의 차이점은?
-- 프로세스와 작업(job)의 차이점은?
 - 메모리는 어떻게 구성되어 있을까?
 - 스레드란?
 - 스레드가 필요한 이유는? (스레드의 장점은?)
-- 프로세스보다 스레드 간 context switching이 더 적은 비용이 드는 이유는?
 - 프로세스와 스레드의 차이점은?
 - 스레드를 지원하는 주체에 따라 나눈다면 어떻게 나뉠까?
-- 사용자 레벨 스레드와 커널 레벨 스레드란?
 - 사용자 레벨 스레드의 장단점?
 - 커널 레벨 스레드의 장단점?
-- 멀티 프로세싱(multi-processing)이란?
-- 멀티 프로세스(multi-process)이란?
-- 멀티 태스킹(multi-tasking)이란?
-- 멀티 프로세스과 멀티 태스킹의 차이는?
-- 멀티 스레드(multi-thread)이란?
 - 멀티 프로세스와 멀티 스레드의 차이점은?
-- 멀티 프로세스가 필요한 이유는?
 
 스케줄링
 
-- Context Switching이란?
+- Context Switching(문맥 교환)이란?
 - Context Switching이 필요한 이유는?
 - Context Switching이 진행되는 과정은?
-- Context에는 예를 들어 어떤 정보들이 있을까?
+- Context에는 어떤 정보들이 있을까?
 - Context Switching는 어떤 상황에서 진행될까?
 - PCB(Process Control Block)란?
 - PCB가 가지고 있는 정보에는 어떤 것들이 있을까?
-- PCB가 생성되는 시점은?
-- PCB가 위치한 곳은?
-- Context Switching이 필요한 이유는?
 - 프로세스의 상태가 전이되는 과정은? (프로세스 상태 전이도의 흐름은?)
 - 인터럽트(Interrupt)란?
 - 인터럽트의 종류에는 어떤 것들이 있을까?
@@ -203,12 +190,10 @@ DNS
 - 시스템 콜(System Call)이란?
 - 시스템 콜이 필요한 이유는?
 - 커널 모드(Kernel mode)와 사용자 모드(User mode)란?
-- 커널 모드가 필요한 이유는?
-- 프로세스가 종료되면(terminated) PCB도 함께 제거될까?
 - 스케줄링이 필요한 이유는?
 - 시스템의 성능을 어떤 기준으로 측정할까?
 - (참고) 용어
-- 스케줄링의 주기에 따라 3가지로 나눈다면?
+- 스케줄링의 주기에 따라 3가지로 나눈다면 어떻게 나뉠까?
 - 선점형 스케줄링과 비선점형 스케줄링의 차이?
 - 자원 관리에 있어서 time sharing과 space sharing의 차이는?
 - FCFS(First Come First Service)란?
@@ -252,7 +237,7 @@ DNS
 - 스핀락의 장단점은?
 - 스핀락은 어떤 특성의 프로세스에서 사용하기 적절할까?
 - 뮤텍스란?
-- 뮤텍스는 어떤 특성의 프로세스에서 사용하기 적절할까?
+- 뮤텍스는 어떤 상황에서 사용하기 적절할까?
 - 스핀락과 뮤텍스의 차이점?
 - 세마포어란?
 - 세마포어에 사용되는 연산의 종류와 그 로직은?
@@ -351,8 +336,6 @@ Blocking/Non-Blocking & Synchronous/Asynchronous
 - Non-Blocking + Sync 조합에 대해 설명해본다면?
 - Blocking + Async 조합에 대해 설명해본다면?
 - Non-Blocking + Async 조합에 대해 설명해본다면?
-
-Reference
 
 [(목차로 돌아가기)](#table-of-contents)
 
