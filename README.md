@@ -41,21 +41,24 @@ CS / Front-End를 공부하고 기록합니다.
 
 ### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/network/README.md)
 
+일반
+
+- 주소창에 www.naver.com을 입력 후 접속했을 때의 무슨 일이 일어날까?
+
 OSI 7계층
 
 - OSI 7계층이란?
 - OSI 7계층이 필요한 이유는?
 - OSI 7계층과 TCP/IP 4계층을 비교해본다면?
-- 주소창에 www.naver.com을 입력 후 접속했을 때의 무슨 일이 일어날까?
 
 OSI Physical Layer(물리 계층, 1계층)
 
 - OSI Physical Layer란?
 
-OSI 2계층(Data-link Layer)
+OSI Data-link Layer(2계층)
 
-- OSI 2계층(Data-link Layer)이란?
-- TCP/IP Network layer(1계층)란?
+- OSI Data-link Layer란?
+- TCP/IP Network (Interface) layer(1계층)란?
 - 데이터 링크 계층의 주요 역할은?
 - 2계층에서 데이터가 hop-by-hop으로 전달된다는 것의 의미는 무엇일까?
 - 프레이밍이란?
@@ -65,13 +68,11 @@ OSI 2계층(Data-link Layer)
 - MAC 주소의 종류에는 어떤 것들이 있을까?
 - 스위치란?
 - 스위치의 포워딩 방식에 대해 설명해본다면?
-- store-and-forward에서 프레임의 오류를 체크하는 방식은?
 - MAC 주소 테이블이란?
 - MAC 주소 테이블이 동작하는 과정은?
 - LAN과 WAN의 차이점?
 - 접근 제어란?
 - 흐름 제어(Flow control)란?
-- 순서 제어란?
 - 오류 제어란?
 - 이더넷이란?
 - 이더넷의 특징?
@@ -92,7 +93,7 @@ OSI Network Layer(3계층) & TCP/IP Internet Layer(2계층)
 - 네트워크에서 '신뢰성'이 의미하는 것은?
 - ICMP(Internet Control Message Protocol)란?
 - IP의 데이터그램 단편화(fragmentation)란?
-- IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는 어떤 것들이
+- IP 데이터그램 단편화/재조립에 사용되는 IP 헤더의 종류에는 어떤 것들이 있을까?
 - IPv6란?
 - ARP(Address Resolution Protocol)란?
 - ARP 테이블이란?
@@ -130,7 +131,7 @@ TCP & UDP
 
 OSI Application Layer(응용 계층, 7계층) & TCP/IP Application Layer(4계층)
 
-- 응용 계층이란?
+- Application Layer란?
 
 DNS
 
@@ -146,6 +147,13 @@ DNS
 - resolver란?
 - DNS가 사용하는 전송 계층(Transport Layer)의 프로토콜은?
 - DNS에 UDP를 사용하는 이유?
+
+로드 밸런싱(Load Balancing)
+
+- 트래픽이 증가해 기존의 컴퓨팅 자원으로 서비스할 수 없을 때, 대처할 수 있는 2가지 방법은?
+- 로드 밸런싱이란?
+- 로드 밸런싱 알고리즘에 대해 설명해본다면?
+- 각 계층의 로드 밸런서에 대해 설명해본다면?
 
 [(목차로 돌아가기)](#table-of-contents)
 
@@ -418,6 +426,7 @@ Data Structure
 
 Algorithm
 
+- 코딩 인터뷰 팁
 - 정렬의 종류에는 어떤 것들이 있을까?
 - 퀵 소트의 피벗 지정 방식을 어떻게 개선할 수 있을까?
 - n번째 피보나치 수를 구하는 방법은?
@@ -434,10 +443,6 @@ Algorithm
 ### Web
 
 ### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/web/README.md)
-
-네트워크
-
-- 주소창에 www.naver.com을 입력 후 접속했을 때의 무슨 일이 일어날까?
 
 브라우저
 
