@@ -35,6 +35,9 @@
 - 제2 정규화에 대해 설명?
 - 제3 정규화에 대해 설명?
 - BCNF에 대해 설명?
+- 데이터베이스의 이상 현상(Anomaly)에는 어떤 것들이 있을까?
+- 정규화의 단점은?
+- 반정규화(De-normalization)란?
 
 키
 
@@ -364,13 +367,17 @@ Phantom Read
 
 테이블의 컬럼이 원자값을 갖도록 테이블을 구조화하는 것
 
+- 해결: 다른 컬럼은 같은 값을 가지고, 문제가 되었던 컬럼이 다른 값을 가지는 row를 추가한다.
+
+> - 해결책은 논리적 구성을 위해 데이터의 중복성을 증가시키는 것으로 볼 수 있다.
+
 (예시 - 정규화 전)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/1-before.png)
 
 (예시 - 정규화 후)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%201.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%201.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/1-after.png)
 
 ---
 
@@ -379,15 +386,18 @@ Phantom Read
 제 1정규화를 진행한 테이블에 대해,
 완전 함수 종속을 만족하도록 테이블을 구조화하는 것
 
-> 완전 함수 종속: 기본키의 부분 집합이 결정자가 되어서는 안된다는 것.
+- 완전 함수 종속: 기본키의 부분 집합이 결정자가 되어서는 안된다는 것, 또는, 기본키 중 특정 컬럼에만 종속된 컬럼(부분 함수 종속)이 없어야 한다는 것이다.
+- 해결: 완전 함수 종속을 만족하도록 테이블을 분리한다.
 
 (예시 - 정규화 전)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%202.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%202.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/2-before.png)
+
+> 기본키는 (Student, Subject)이다. 그런데 Age의 경우 Student에만 종속되어 있다. 즉, Student를 알면 Age를 알 수 있다.
 
 (예시 - 정규화 후)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%203.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%203.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/2-after.png)
 
 ---
 
@@ -396,15 +406,18 @@ Phantom Read
 제2 정규화를 진행한 테이블에 대해,
 이행적 종속이 없도록 테이블을 구조화하는 것
 
-> 이행적 종속: A→B, B→C일 때 A→C가 성립되는 것.
+- 이행적 종속: A→B, B→C일 때 A→C가 성립되는 것. 즉, 기본키 이외의 다른 컬럼이 그 외 컬럼을 결정하는 것.
+- 해결: 이행적 종속이 없도록 테이블을 분리한다.
 
 (예시 - 정규화 전)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%204.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%204.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/3-before.png)
+
+> Student_id가 기본키이다. 그런데 Zip을 알면 Street, City, State를 알 수 있다.
 
 (예시 - 정규화 후)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%205.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%205.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/3-after.png)
 
 ---
 
@@ -413,13 +426,53 @@ Phantom Read
 제3 정규화를 진행한 테이블에 대해,
 모든 결정자가 후보키가 되도록 테이블을 구조화하는 것
 
+- 일반 컬럼이 후보키를 결정하는 경우, BCNF를 만족하지 못하게 된다.
+
 (예시 - 정규화 전)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%206.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%206.png)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/bcnf-before.png)
+
+> 후보키는 (학생, 과목)이다. 그런데 교수가 결정자이다. (교수는 한 과목만 강의할 수 있다는 가정) 즉, 교수가 정해지면 과목을 알 수 있다. 그런데 교수는 후보키가 아니다. 일반 컬럼이 후보키를 결정하고 있다.
 
 (예시 - 정규화 후)
+![Database%2079d9527d1d534251afb6af40532b918b/Untitled.png](Database%2079d9527d1d534251afb6af40532b918b/bcnf-after.png)
 
-![Database%2079d9527d1d534251afb6af40532b918b/Untitled%207.png](Database%2079d9527d1d534251afb6af40532b918b/Untitled%207.png)
+---
+
+### 데이터베이스의 이상 현상(Anomaly)에는 어떤 것들이 있을까?
+
+삽입 이상(Insertion Anomaly)
+
+- 자료를 삽입할 때, 의도하지 않은 자료까지 삽입해야만 테이블에 추가가 가능한 현상
+
+갱신 이상(Update Anomaly)
+
+- 중복된 데이터 중 일부만 수정되어 데이터 모순이 발생하는 현상
+
+삭제 이상(Deletion Anomaly)
+
+- 어떤 정보를 삭제하면, 유용한 다른 정보까지 삭제되어 버리는 현상
+
+> - 이상 현상은 데이터베이스의 테이블 설계가 잘못되어 데이터의 중복이 생길 때 발생할 수 있다.
+
+---
+
+### 정규화의 단점은?
+
+정규화를 진행하는 과정에서 테이블이 여러 개로 분리된다. 테이블이 많아지면, 데이터를 추출하는 과정에서 `JOIN` 연산이 많이 사용되고, 이는 질의에 대한 응답 시간이 느려지는 요인이 된다.
+
+---
+
+### 반정규화(De-normalization)란?
+
+정규화로 인해 발생하는 개발이나 운영 상 이슈를 방지/해결하기 위해 분리된 테이블을 다시 통합하는 것.
+
+반정규화가 고려될 수 있는 상황
+
+- 테이블에 `JOIN`을 지나치게 많이 사용하게 되어 기술적으로 구현이 어렵거나 성능상의 이슈가 있을 때
+- 테이블에 대량의 데이터가 있고, 대량의 범위를 자주 처리하는 경우
+
+> - 일반적으로 데이터의 무결성보다 조회 속도가 더 중요하다고 판단될 때 수행한다.
 
 ## 키
 

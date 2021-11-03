@@ -373,6 +373,9 @@ Blocking/Non-Blocking & Synchronous/Asynchronous
 - 제2 정규화에 대해 설명?
 - 제3 정규화에 대해 설명?
 - BCNF에 대해 설명?
+- 데이터베이스의 이상 현상(Anomaly)에는 어떤 것들이 있을까?
+- 정규화의 단점은?
+- 반정규화(De-normalization)란?
 
 키
 
