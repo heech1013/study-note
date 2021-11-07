@@ -520,7 +520,6 @@ function merge(arr, left, mid, right) {
     } else {
       arr[k++] = R[j++];
     }
-    k++;
   }
 
   // remain
