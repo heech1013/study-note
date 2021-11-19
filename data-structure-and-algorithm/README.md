@@ -593,9 +593,6 @@ function heapSort(arr) {
 }
 
 function heapify(arr, parentIdx, lastIdx) {
-  // let leftChildIdx, rightChildIdx;
-  // let largestIdx;
-
   // 자식 인덱스가 마지막 인덱스를 넘지 않을 때까지 반복.
   // 단, 왼쪽 자식 인덱스를 기준으로 해야 왼쪽 자식이 마지막 인덱스인 경우를 조건에 포함할 수 있다.
   while (

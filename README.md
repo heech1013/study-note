@@ -27,6 +27,7 @@ CS / Front-End를 공부하고 기록합니다.
 - [OS](#os)
 - [Database](#database)
 - [Data Structure & Algorithm](#data-structure--algorithm)
+- [Etc](#etc)
 
 [Front-End](#front-end)
 
@@ -434,6 +435,25 @@ Algorithm
 - 퀵 소트의 피벗 지정 방식을 어떻게 개선할 수 있을까?
 - n번째 피보나치 수를 구하는 방법은?
 - DFS와 BFS의 시간 복잡도는?
+
+[(목차로 돌아가기)](#table-of-contents)
+
+<br>
+
+---
+
+### Etc
+
+### [(답변 보러가기 →)](https://github.com/heech1013/tech-interview-handbook/blob/main/etc/README.md)
+
+객체 지향 프로그래밍(OOP)
+
+- 객체 지향 프로그래밍이란?
+- 객체 지향 프로그래밍의 장단점은?
+- 절차 지향 프로그래밍이란?
+- 클래스와 인스턴스(객체)란?
+- 오버로딩(Overloading)과 오버라이딩(Overriding)의 차이점은?
+- 객체 지향 5대 원칙에 대해 설명해본다면?
 
 [(목차로 돌아가기)](#table-of-contents)
 
