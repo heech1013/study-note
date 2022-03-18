@@ -7,7 +7,7 @@
 <br>
 
 CS / Front-End를 공부하고 기록합니다.  
- ( 21.01 ~ )
+ ( 2021.01 ~ 2021.11 )
 
 > · 꼬리에 꼬리를 물고 `왜?`에 대해 탐구한다.  
 > · 내용에 `핵심`만 담는다.  
@@ -21,20 +21,20 @@ CS / Front-End를 공부하고 기록합니다.
 
 ## Table of Contents
 
-[CS](#cs)
+- [CS](#cs)
+    - [Network](#network)
+    - [OS](#os)
+    - [Database](#database)
+    - [Data Structure & Algorithm](#data-structure--algorithm)
+    - [Etc](#etc)
 
-- [Network](#network)
-- [OS](#os)
-- [Database](#database)
-- [Data Structure & Algorithm](#data-structure--algorithm)
-- [Etc](#etc)
+- [Front-End](#front-end)
+    - [Web](#web)
+    - [JavaScript](#javascript)
 
-[Front-End](#front-end)
+- [Reference](#reference)
 
-- [Web](#web)
-- [JavaScript](#javascript)
-
-[Reference](#Reference)
+<br>
 
 ## CS
 
